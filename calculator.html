@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор – ООО "ПАПИР-МАРКЕТ"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .calc-container { max-width:600px; margin:0 auto; background:#fff; padding:30px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); }
+        .calc-container label { font-weight:600; display:block; margin-top:20px; }
+        .calc-container select, .calc-container input { width:100%; padding:10px; border:1px solid #ddd; border-radius:4px; }
+        .calc-result { margin-top:25px; padding:15px; background:#f5f5f5; border-radius:4px; text-align:center; font-size:1.2rem; }
+        .calc-result .price { color:#e84948; font-weight:bold; font-size:2rem; }
+        .calc-actions { display:flex; gap:15px; justify-content:center; margin-top:20px; flex-wrap:wrap; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-container">
+        <div class="logo"><a href="index.html">ПАПИР-МАРКЕТ</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Продукция</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="calculator.html" class="active">Калькулятор</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+7XXXXXXXXXX" class="header-phone">+7 XXX XXX-XX-XX</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">☰</div>
+    </div>
+</header>
+
+<main style="padding:40px 0;">
+    <div class="container">
+        <h1 style="text-align:center;margin-bottom:30px;">Калькулятор стоимости</h1>
+        <div class="calc-container">
+            <label for="productSelect">Выберите товар:</label>
+            <select id="productSelect"></select>
+            <label for="quantity">Количество (п.м.):</label>
+            <input type="number" id="quantity" value="100" min="1" step="1">
+            <button id="calcBtn" class="btn" style="margin-top:20px; width:100%;">Рассчитать</button>
+            <div id="result" class="calc-result">
+                <p>Общая стоимость: <span class="price" id="totalPrice">0</span> ₽</p>
+                <p style="font-size:0.9rem;color:#888;">Цена за единицу: <span id="unitPrice">0</span> ₽</p>
+            </div>
+            <div class="calc-actions">
+                <button id="orderBtn" class="btn" style="background:#28a745;">Отправить заявку</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Плавающие кнопки, футер -->
+<div class="floating-buttons">
+    <a href="https://wa.me/7XXXXXXXXXX?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" class="floating-btn whatsapp">💬</a>
+    <a href="https://t.me/username?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" class="floating-btn telegram">✈️</a>
+    <a href="#" class="floating-btn max">⚡</a>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО "ПАПИР-МАРКЕТ"</h4>
+                <p>Производитель защитных картонных уголков, бумаги для гофрирования и картона для плоских слоев гофрокартона.</p>
+                <p><strong>ИНН:</strong> 1234567890</p>
+                <p><strong>ОГРН:</strong> 1234567890123</p>
+                <p><strong>Юридический адрес:</strong> Краснодарский край, г. Новокубанск, ул. Новаторов 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+7XXXXXXXXXX">+7 XXX XXX-XX-XX</a></p>
+                <p><a href="mailto:info@papirmarket.ru">info@papirmarket.ru</a></p>
+                <p>Краснодарский край, г. Новокубанск, ул. Новаторов 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО "ПАПИР-МАРКЕТ". Все права защищены.</div>
+    </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

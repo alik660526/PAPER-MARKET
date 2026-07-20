@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс-лист – ООО "ПАПИР-МАРКЕТ"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .price-header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:30px; }
+        .price-table-wrap { overflow-x:auto; background:#fff; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.04); padding:15px; }
+        .price-table-wrap table { width:100%; border-collapse:collapse; font-size:0.95rem; }
+        .price-table-wrap th, .price-table-wrap td { padding:12px 15px; text-align:center; border-bottom:1px solid #eee; }
+        .price-table-wrap th { background:#f5f5f5; font-weight:600; }
+        .price-table-wrap .product-name { text-align:left; font-weight:500; }
+        .price-table-wrap .price-cell { font-weight:600; color:#e84948; }
+        .price-table-wrap .order-btn { display:inline-block; background:#e84948; color:#fff; padding:6px 18px; border-radius:4px; font-size:0.85rem; transition:0.3s; }
+        .price-table-wrap .order-btn:hover { background:#c0392b; }
+        .price-actions { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:30px; }
+        @media (max-width:768px){ .price-header{flex-direction:column;align-items:stretch;gap:15px;} .price-table-wrap th, .price-table-wrap td{padding:8px 10px;font-size:0.85rem;} }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-container">
+        <div class="logo"><a href="index.html">ПАПИР-МАРКЕТ</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Продукция</a></li>
+                <li><a href="price.html" class="active">Прайс-лист</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+7XXXXXXXXXX" class="header-phone">+7 XXX XXX-XX-XX</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">☰</div>
+    </div>
+</header>
+
+<main style="padding:40px 0;">
+    <div class="container">
+        <div class="price-header"><h1>Прайс-лист на защитные картонные уголки</h1></div>
+        <div class="price-table-wrap">
+            <table>
+                <thead><tr><th style="text-align:left;">Товар</th><th>Цена до 500 п.м.</th><th>Цена до 1000 п.м.</th><th>Цена от 1000 п.м.</th><th>Заказать</th></tr></thead>
+                <tbody id="priceTableBody"></tbody>
+            </table>
+        </div>
+        <p style="margin-top:20px;color:#666;font-size:0.9rem;"><strong>Примечание:</strong> Цены указаны за погонный метр. Точная стоимость заказа рассчитывается менеджером с учётом объёма и условий доставки.</p>
+        <div class="price-actions">
+            <a href="#" class="btn">Скачать прайс-лист (PDF)</a>
+            <a href="contacts.html" class="btn btn-outline">Оставить заявку на КП</a>
+        </div>
+    </div>
+</main>
+
+<!-- Плавающие кнопки, футер -->
+<div class="floating-buttons">
+    <a href="https://wa.me/7XXXXXXXXXX?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" class="floating-btn whatsapp">💬</a>
+    <a href="https://t.me/username?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" class="floating-btn telegram">✈️</a>
+    <a href="#" class="floating-btn max">⚡</a>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО "ПАПИР-МАРКЕТ"</h4>
+                <p>Производитель защитных картонных уголков, бумаги для гофрирования и картона для плоских слоев гофрокартона.</p>
+                <p><strong>ИНН:</strong> 1234567890</p>
+                <p><strong>ОГРН:</strong> 1234567890123</p>
+                <p><strong>Юридический адрес:</strong> Краснодарский край, г. Новокубанск, ул. Новаторов 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+7XXXXXXXXXX">+7 XXX XXX-XX-XX</a></p>
+                <p><a href="mailto:info@papirmarket.ru">info@papirmarket.ru</a></p>
+                <p>Краснодарский край, г. Новокубанск, ул. Новаторов 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО "ПАПИР-МАРКЕТ". Все права защищены.</div>
+    </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+    const tbody = document.getElementById('priceTableBody');
+    const corners = data.products.corner;
+    if (corners && corners.length) {
+        corners.forEach(p => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="product-name">${p.title}</td>
+                <td class="price-cell">${p.priceTo100} ₽</td>
+                <td>${p.priceTo500} ₽</td>
+                <td>${p.priceTo1000} ₽</td>
+                <td><a href="product.html?id=${p.id}" class="order-btn">Подробнее</a></td>
+            `;
+            tbody.appendChild(tr);
+        });
+    } else {
+        tbody.innerHTML = '<tr><td colspan="5">Нет данных</td></tr>';
+    }
+</script>
+</body>
+</html>

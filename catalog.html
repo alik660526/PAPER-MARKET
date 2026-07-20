@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукция – ООО "ПАПИР-МАРКЕТ"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="container header-container">
+        <div class="logo"><a href="index.html">ПАПИР-МАРКЕТ</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html" class="active">Продукция</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+7XXXXXXXXXX" class="header-phone">+7 XXX XXX-XX-XX</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">☰</div>
+    </div>
+</header>
+
+<main style="padding:40px 0;">
+    <div class="container">
+        <h1 class="section-title">Продукция</h1>
+        <div class="product-grid" id="catalogGrid"></div>
+    </div>
+</main>
+
+<!-- Плавающие кнопки, футер, скрипты -->
+<div class="floating-buttons">
+    <a href="https://wa.me/7XXXXXXXXXX?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" class="floating-btn whatsapp">💬</a>
+    <a href="https://t.me/username?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" class="floating-btn telegram">✈️</a>
+    <a href="#" class="floating-btn max">⚡</a>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО "ПАПИР-МАРКЕТ"</h4>
+                <p>Производитель защитных картонных уголков, бумаги для гофрирования и картона для плоских слоев гофрокартона.</p>
+                <p><strong>ИНН:</strong> 1234567890</p>
+                <p><strong>ОГРН:</strong> 1234567890123</p>
+                <p><strong>Юридический адрес:</strong> Краснодарский край, г. Новокубанск, ул. Новаторов 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+7XXXXXXXXXX">+7 XXX XXX-XX-XX</a></p>
+                <p><a href="mailto:info@papirmarket.ru">info@papirmarket.ru</a></p>
+                <p>Краснодарский край, г. Новокубанск, ул. Новаторов 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО "ПАПИР-МАРКЕТ". Все права защищены.</div>
+    </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+    // Фильтрация по категории из URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryFilter = urlParams.get('category'); // 'corner', 'fluting', 'liner' или null
+
+    let allProducts = [];
+    if (data.products.corner) allProducts.push(...data.products.corner.map(p => ({...p, category: 'corner'})));
+    if (data.products.fluting) allProducts.push(...data.products.fluting.map(p => ({...p, category: 'fluting'})));
+    if (data.products.liner) allProducts.push(...data.products.liner.map(p => ({...p, category: 'liner'})));
+
+    // Фильтруем, если задана категория
+    let filteredProducts = allProducts;
+    if (categoryFilter) {
+        filteredProducts = allProducts.filter(p => p.category === categoryFilter);
+    }
+
+    const grid = document.getElementById('catalogGrid');
+    if (filteredProducts.length === 0) {
+        grid.innerHTML = '<p>Товары не найдены.</p>';
+    } else {
+        filteredProducts.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            const priceHtml = p.priceMin ? `<div class="price">от ${p.priceMin} ₽/п.м.</div>` : '<div class="price">Цена по запросу</div>';
+            const imageSrc = p.image || 'https://picsum.photos/seed/' + p.id + '/400/300';
+            card.innerHTML = `
+                <img src="${imageSrc}" alt="${p.title}" loading="lazy">
+                <h3>${p.title}</h3>
+                ${priceHtml}
+                <div class="category-actions">
+                    <a href="product.html?id=${p.id}" class="btn btn-sm">Подробнее</a>
+                    <a href="https://wa.me/7XXXXXXXXXX?text=Здравствуйте!%20Хочу%20заказать%20${encodeURIComponent(p.title)}" target="_blank" class="btn btn-sm btn-outline">WhatsApp</a>
+                    <a href="https://t.me/username?text=Здравствуйте!%20Хочу%20заказать%20${encodeURIComponent(p.title)}" target="_blank" class="btn btn-sm btn-outline">Telegram</a>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+</script>
+</body>
+</html>
