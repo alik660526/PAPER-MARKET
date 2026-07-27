@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Доставка продукции ООО «ПАПИР-МАРКЕТ» по Южному федеральному округу и всей России. Сроки, стоимость, самовывоз.">
+    <title>Доставка – ООО «ПАПИР-МАРКЕТ»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         МИКРОРАЗМЕТКА SCHEMA.ORG
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://papir-market.ru/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Доставка",
+                "item": "https://papir-market.ru/delivery.html"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .delivery-card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-light);
+        }
+        .delivery-card h3 {
+            margin-top: 0;
+            color: var(--text-primary);
+        }
+        .delivery-card p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        .delivery-card ul {
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+        .delivery-card ul li {
+            margin-bottom: 6px;
+        }
+        .delivery-card ul li strong {
+            color: var(--text-primary);
+        }
+
+        .delivery-cta {
+            text-align: center;
+            background: var(--bg-light-green);
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border: 1px solid var(--border-color);
+        }
+        .delivery-cta h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .delivery-cta p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+        .delivery-cta .btn {
+            font-size: 1.05rem;
+            padding: 12px 36px;
+        }
+
+        .delivery-note {
+            background: var(--bg-light-green);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary);
+        }
+        .delivery-note p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        .delivery-note strong {
+            color: var(--text-primary);
+        }
+
+        .delivery-scheme {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .delivery-scheme .step {
+            background: var(--bg-card);
+            padding: 15px 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-card);
+        }
+        .delivery-scheme .step .num {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+        .delivery-scheme .step .label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .delivery-scheme .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .samples-link {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background: var(--bg-gray);
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+        .samples-link a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .samples-link a:hover {
+            color: var(--primary-hover);
+        }
+
+        .breadcrumbs {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .breadcrumbs a {
+            color: var(--primary);
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumbs span {
+            margin: 0 6px;
+        }
+
+        @media (max-width: 768px) {
+            .delivery-grid {
+                grid-template-columns: 1fr;
+            }
+            .delivery-scheme {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .delivery-scheme .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ШАПКА
+     ============================================================ -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">ПАПИР-МАРКЕТ</span>
+                <span class="logo-sub">Производитель упаковочных материалов</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Продукция</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+                <li><a href="delivery.html" class="active">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+79183268872" class="header-phone">+7 918 326-88-72</a>
+            <a href="calculator.html" class="btn btn-primary btn-sm">Получить расчёт</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">☰</div>
+    </div>
+</header>
+
+<!-- ============================================================
+     ОСНОВНОЙ КОНТЕНТ
+     ============================================================ -->
+<main style="padding:40px 0;">
+    <div class="container">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <span>Доставка</span>
+        </div>
+
+        <h1 style="margin-bottom:15px;">Доставка продукции</h1>
+        <p style="font-size:1.1rem;color:var(--text-secondary);max-width:800px;">
+            Отгружаем продукцию со склада в Новокубанске. Организуем доставку по Краснодарскому краю, ЮФО и другим регионам России.
+        </p>
+
+        <!-- Схема процесса -->
+        <div class="delivery-scheme">
+            <div class="step">
+                <div class="num">1</div>
+                <div class="label">Заявка</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="num">2</div>
+                <div class="label">Расчёт</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="num">3</div>
+                <div class="label">Производство</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="num">4</div>
+                <div class="label">Отгрузка</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="num">5</div>
+                <div class="label">Получение</div>
+            </div>
+        </div>
+
+        <div class="delivery-grid">
+            <div class="delivery-card">
+                <h3>🚚 Способы доставки</h3>
+                <ul>
+                    <li><strong>Самовывоз</strong> — со склада по адресу: 352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10.</li>
+                    <li><strong>Транспортные компании</strong> — отправка по всей России (ПЭК, Деловые Линии, СДЭК и другие).</li>
+                    <li><strong>Собственный транспорт</strong> — доставка по Краснодарскому краю и ЮФО.</li>
+                </ul>
+            </div>
+            <div class="delivery-card">
+                <h3>📍 Регионы поставок</h3>
+                <ul>
+                    <li><strong>Краснодарский край</strong> — основной регион.</li>
+                    <li><strong>Южный федеральный округ</strong> — Ростовская область, Ставропольский край, Адыгея, Крым.</li>
+                    <li><strong>Другие регионы России</strong> — по запросу через транспортные компании.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="delivery-note">
+            <p><strong>📦 Стоимость и сроки доставки</strong> рассчитываются индивидуально в зависимости от объёма заказа и региона.</p>
+        </div>
+
+        <!-- Ссылка на тестовые образцы -->
+        <div class="samples-link">
+            💡 Хотите проверить качество продукции до заказа? <a href="index.html#samples">Запросите тестовые образцы</a>
+        </div>
+
+        <!-- Блок с призывом -->
+        <div class="delivery-cta">
+            <h3>Рассчитать стоимость доставки</h3>
+            <p>Оставьте заявку — менеджер свяжется с вами, уточнит детали и рассчитает стоимость доставки.</p>
+            <a href="contacts.html" class="btn btn-primary">Оставить заявку</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- ============================================================
+     ПОДВАЛ
+     ============================================================ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО «ПАПИР-МАРКЕТ»</h4>
+                <p style="font-size:0.9rem;">Производитель защитных картонных уголков, картона для гофрокартона и крафт-бумаги.</p>
+                <p><strong>ИНН:</strong> 2372025383</p>
+                <p><strong>ОГРН:</strong> 1192375033674</p>
+                <p><strong>Юридический адрес:</strong> 352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+79183268872">+7 918 326-88-72</a></p>
+                <p><a href="mailto:papir-market.sale@mail.ru">papir-market.sale@mail.ru</a></p>
+                <p>352244, Краснодарский край, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО «ПАПИР-МАРКЕТ». Все права защищены.</div>
+    </div>
+</footer>
+
+<!-- ============================================================
+     ПЛАВАЮЩИЕ КНОПКИ
+     ============================================================ -->
+<div class="floating-buttons">
+    <a href="https://wa.me/79183268872?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" aria-label="Написать в WhatsApp">💬</a>
+    <a href="https://t.me/in4707?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn telegram" aria-label="Написать в Telegram">✈️</a>
+</div>
+
+<!-- ============================================================
+     СКРИПТЫ
+     ============================================================ -->
+<script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ================================================================
+    // МОБИЛЬНОЕ МЕНЮ
+    // ================================================================
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) {
+                nav.classList.toggle('open');
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

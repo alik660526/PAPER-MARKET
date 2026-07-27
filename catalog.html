@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог продукции ООО «ПАПИР-МАРКЕТ»: защитные картонные уголки, бумага для гофрирования (флютинг), картон для плоских слоев гофрокартона (лайнер).">
+    <title>Каталог упаковочных материалов – ООО «ПАПИР-МАРКЕТ»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         МИКРОРАЗМЕТКА SCHEMA.ORG
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Каталог упаковочных материалов",
+        "description": "Защитные картонные уголки, картон для гофрокартона и крафт-бумага от производителя.",
+        "url": "https://papir-market.ru/catalog.html",
+        "numberOfItems": "13"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://papir-market.ru/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Каталог",
+                "item": "https://papir-market.ru/catalog.html"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .catalog-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .filter-buttons .btn {
+            padding: 8px 24px;
+            font-size: 0.95rem;
+            background: var(--bg-gray);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.25s ease;
+            font-weight: 500;
+        }
+        .filter-buttons .btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .filter-buttons .btn:hover:not(.active) {
+            background: var(--border-color);
+            border-color: var(--primary);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-light);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card-hover);
+        }
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--bg-gray);
+        }
+        .product-card h3 {
+            padding: 15px 15px 5px;
+            font-size: 1.15rem;
+            color: var(--text-primary);
+        }
+        .product-card .product-description {
+            padding: 0 15px 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            flex: 1;
+        }
+        .product-card .product-application {
+            padding: 0 15px 10px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .product-card .product-application strong {
+            color: var(--text-secondary);
+        }
+        .product-card .price {
+            padding: 0 15px 10px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        .product-card .category-actions {
+            padding: 0 15px 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .product-card .category-actions .btn {
+            font-size: 0.9rem;
+            padding: 6px 18px;
+        }
+
+        .product-badge-price {
+            display: inline-block;
+            background: var(--bg-gray);
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 12px;
+            border-radius: 20px;
+            margin: 0 15px 5px;
+            align-self: flex-start;
+        }
+
+        .breadcrumbs {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .breadcrumbs a {
+            color: var(--primary);
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumbs span {
+            margin: 0 6px;
+        }
+
+        @media (max-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .filter-buttons .btn {
+                padding: 6px 16px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ШАПКА
+     ============================================================ -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">ПАПИР-МАРКЕТ</span>
+                <span class="logo-sub">Производитель упаковочных материалов</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html" class="active">Продукция</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+79183268872" class="header-phone">+7 918 326-88-72</a>
+            <a href="calculator.html" class="btn btn-primary btn-sm">Получить расчёт</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">☰</div>
+    </div>
+</header>
+
+<!-- ============================================================
+     ОСНОВНОЙ КОНТЕНТ
+     ============================================================ -->
+<main style="padding:40px 0;">
+    <div class="container">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <span>Каталог</span>
+        </div>
+
+        <h1 class="section-title">Каталог упаковочных материалов</h1>
+
+        <p class="catalog-description">
+            Защитные картонные уголки, картон для плоских слоёв гофрокартона и крафт-бумага.
+            Продукция для сельхозпроизводителей, пищевых предприятий, производителей упаковки и логистических компаний.
+        </p>
+
+        <!-- ФИЛЬТРЫ -->
+        <div class="filter-buttons">
+            <button class="btn active" data-filter="all">Все</button>
+            <button class="btn" data-filter="corner">Уголки</button>
+            <button class="btn" data-filter="fluting">Флютинг</button>
+            <button class="btn" data-filter="liner">Картон</button>
+        </div>
+
+        <!-- СЕТКА ТОВАРОВ -->
+        <div class="product-grid" id="catalogGrid"></div>
+
+        <p class="disclaimer">Не является публичной офертой.</p>
+
+    </div>
+</main>
+
+<!-- ============================================================
+     ПОДВАЛ
+     ============================================================ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО «ПАПИР-МАРКЕТ»</h4>
+                <p style="font-size:0.9rem;">Производитель защитных картонных уголков, картона для гофрокартона и крафт-бумаги.</p>
+                <p><strong>ИНН:</strong> 2372025383</p>
+                <p><strong>ОГРН:</strong> 1192375033674</p>
+                <p><strong>Юридический адрес:</strong> 352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+79183268872">+7 918 326-88-72</a></p>
+                <p><a href="mailto:papir-market.sale@mail.ru">papir-market.sale@mail.ru</a></p>
+                <p>352244, Краснодарский край, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО «ПАПИР-МАРКЕТ». Все права защищены.</div>
+    </div>
+</footer>
+
+<!-- ============================================================
+     ПЛАВАЮЩИЕ КНОПКИ
+     ============================================================ -->
+<div class="floating-buttons">
+    <a href="https://wa.me/79183268872?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" aria-label="Написать в WhatsApp">💬</a>
+    <a href="https://t.me/in4707?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn telegram" aria-label="Написать в Telegram">✈️</a>
+</div>
+
+<!-- ============================================================
+     СКРИПТЫ
+     ============================================================ -->
+<script src="data.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+    const catalogGrid = document.getElementById('catalogGrid');
+
+    function renderCatalogWithFilter(category) {
+        if (!catalogGrid || typeof data === 'undefined' || !data.products) {
+            console.warn('Catalog: data не загружена');
+            return;
+        }
+
+        let products = [];
+        if (category === 'all') {
+            products = [
+                ...data.products.corner,
+                ...data.products.fluting,
+                ...data.products.liner
+            ];
+        } else if (category === 'corner') {
+            products = data.products.corner;
+        } else if (category === 'fluting') {
+            products = data.products.fluting;
+        } else if (category === 'liner') {
+            products = data.products.liner;
+        }
+
+        catalogGrid.innerHTML = '';
+
+        if (!products || products.length === 0) {
+            catalogGrid.innerHTML = `
+                <div style="grid-column:1/-1; text-align:center; padding:60px 0; color:var(--text-muted);">
+                    <p style="font-size:1.2rem;">В этой категории пока нет товаров.</p>
+                    <p style="font-size:0.95rem;">Свяжитесь с нами для уточнения ассортимента.</p>
+                </div>
+            `;
+            return;
+        }
+
+        products.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+
+            const imageSrc = p.image || 'images/zaglushki/no-image.webp';
+            const title = p.title || 'Товар';
+            const description = p.description || '';
+            const application = p.application || '';
+            const price = p.priceMin !== undefined && p.priceMin > 0
+                ? `от ${p.priceMin} ₽/п.м.`
+                : '';
+
+            let priceBadge = '';
+            if (!price && (p.id === 'fluting-1' || p.id === 'liner-1')) {
+                priceBadge = `<span class="product-badge-price">Цена по запросу</span>`;
+            }
+
+            card.innerHTML = `
+                <img src="${imageSrc}" alt="${title}" loading="lazy" onerror="this.src='images/zaglushki/no-image.webp'">
+                <h3>${title}</h3>
+                ${priceBadge}
+                ${description ? `<div class="product-description">${description}</div>` : ''}
+                ${application ? `<div class="product-application"><strong>Применение:</strong> ${application}</div>` : ''}
+                ${price ? `<div class="price">${price}</div>` : ''}
+                <div class="category-actions">
+                    <a href="product.html?id=${p.id}" class="btn btn-secondary">Подробнее</a>
+                    ${price ? `<a href="calculator.html" class="btn btn-primary">Рассчитать</a>` : `<a href="contacts.html" class="btn btn-primary">Запросить цену</a>`}
+                </div>
+            `;
+            catalogGrid.appendChild(card);
+        });
+    }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.getAttribute('data-filter');
+            renderCatalogWithFilter(filter);
+        });
+    });
+
+    renderCatalogWithFilter('all');
+
+    // ================================================================
+    // МОБИЛЬНОЕ МЕНЮ
+    // ================================================================
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) {
+                nav.classList.toggle('open');
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>

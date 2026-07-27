@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Калькулятор стоимости защитных картонных уголков ООО «ПАПИР-МАРКЕТ». Рассчитайте цену онлайн и получите коммерческое предложение.">
+    <title>Калькулятор стоимости уголков – ООО «ПАПИР-МАРКЕТ»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         МИКРОРАЗМЕТКА SCHEMA.ORG
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://papir-market.ru/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Калькулятор",
+                "item": "https://papir-market.ru/calculator.html"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .calc-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .calc-intro strong {
+            color: var(--text-primary);
+        }
+
+        .calc-help {
+            background: var(--bg-light-green);
+            padding: 30px 25px;
+            border-radius: 8px;
+            margin-top: 40px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        .calc-help h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .calc-help p {
+            margin-bottom: 18px;
+            color: var(--text-secondary);
+        }
+        .calc-help .btn {
+            font-size: 1rem;
+            padding: 10px 30px;
+        }
+
+        .calc-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-light);
+        }
+        .calc-container label {
+            font-weight: 600;
+            display: block;
+            margin-top: 20px;
+            color: var(--text-primary);
+        }
+        .calc-container select,
+        .calc-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-input);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+        .calc-result {
+            margin-top: 25px;
+            padding: 15px;
+            background: var(--bg-light-green);
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+        .calc-result .price {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 2rem;
+        }
+        .calc-result .disclaimer-small {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        .calc-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumbs {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .breadcrumbs a {
+            color: var(--primary);
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumbs span {
+            margin: 0 6px;
+        }
+
+        .calc-result-success {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: var(--bg-light-green);
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid var(--primary);
+        }
+        .calc-result-success.show {
+            display: block;
+        }
+        .calc-result-success p {
+            margin: 5px 0;
+            color: var(--text-primary);
+        }
+        .calc-result-success .icon {
+            font-size: 2.5rem;
+        }
+
+        .samples-link {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: var(--bg-gray);
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+        .samples-link a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .samples-link a:hover {
+            color: var(--primary-hover);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ШАПКА
+     ============================================================ -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">ПАПИР-МАРКЕТ</span>
+                <span class="logo-sub">Производитель упаковочных материалов</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Продукция</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="calculator.html" class="active">Калькулятор</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+79183268872" class="header-phone">+7 918 326-88-72</a>
+            <a href="calculator.html" class="btn btn-primary btn-sm">Получить расчёт</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">☰</div>
+    </div>
+</header>
+
+<!-- ============================================================
+     ОСНОВНОЙ КОНТЕНТ
+     ============================================================ -->
+<main style="padding:40px 0;">
+    <div class="container">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <span>Калькулятор</span>
+        </div>
+
+        <h1 style="text-align:center;margin-bottom:15px;">Калькулятор стоимости</h1>
+
+        <div class="calc-intro">
+            <p>
+                Рассчитайте ориентировочную стоимость защитных картонных уголков.
+                Выберите товар, укажите количество в <strong>погонных метрах (п.м.)</strong> — и получите предварительную цену.
+            </p>
+            <p style="font-size:0.95rem;color:var(--text-muted);">
+                ⚡ Для точного расчёта с учётом доставки и индивидуальных условий — оставьте заявку.
+            </p>
+        </div>
+
+        <div class="calc-container">
+            <form id="calcForm">
+                <label for="productSelect">Выберите товар:</label>
+                <select id="productSelect" required>
+                    <option value="">— Выберите продукцию —</option>
+                </select>
+
+                <label for="quantity">Количество (п.м.):</label>
+                <input type="number" id="quantity" value="100" min="1" step="1" required>
+
+                <label for="calcCity">Город доставки:</label>
+                <input type="text" id="calcCity" placeholder="Например: Краснодар" required>
+
+                <label for="calcPhone">Ваш телефон:</label>
+                <input type="tel" id="calcPhone" placeholder="+7 (___) ___-__-__" required>
+
+                <label class="consent-checkbox">
+                    <input type="checkbox" name="personal_data_consent" value="yes" required>
+                    <span>Я даю согласие на <a href="policy.html" target="_blank">обработку персональных данных</a></span>
+                </label>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:15px;" id="calcSubmitBtn">
+                    Получить точный расчёт
+                </button>
+            </form>
+
+            <div id="calcResult" class="calc-result-success">
+                <div class="icon">✅</div>
+                <p style="font-size:1.2rem; font-weight:600;">Спасибо! Ваш запрос отправлен.</p>
+                <p style="font-size:0.95rem;color:var(--text-secondary);">Менеджер свяжется с вами в течение 15 минут.</p>
+            </div>
+
+            <div class="disclaimer">Не является публичной офертой.</div>
+        </div>
+
+        <!-- Ссылка на тестовые образцы -->
+        <div class="samples-link">
+            💡 Хотите проверить качество? <a href="index.html#samples">Запросите тестовые образцы</a> продукции.
+        </div>
+
+        <!-- Блок помощи -->
+        <div class="calc-help">
+            <h3>Не уверены в выборе?</h3>
+            <p>Оставьте заявку — менеджер поможет подобрать подходящий размер и рассчитает точную стоимость с учётом доставки.</p>
+            <a href="contacts.html" class="btn btn-primary">Получить консультацию</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- ============================================================
+     ПОДВАЛ
+     ============================================================ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО «ПАПИР-МАРКЕТ»</h4>
+                <p style="font-size:0.9rem;">Производитель защитных картонных уголков, картона для гофрокартона и крафт-бумаги.</p>
+                <p><strong>ИНН:</strong> 2372025383</p>
+                <p><strong>ОГРН:</strong> 1192375033674</p>
+                <p><strong>Юридический адрес:</strong> 352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+79183268872">+7 918 326-88-72</a></p>
+                <p><a href="mailto:papir-market.sale@mail.ru">papir-market.sale@mail.ru</a></p>
+                <p>352244, Краснодарский край, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО «ПАПИР-МАРКЕТ». Все права защищены.</div>
+    </div>
+</footer>
+
+<!-- ============================================================
+     ПЛАВАЮЩИЕ КНОПКИ
+     ============================================================ -->
+<div class="floating-buttons">
+    <a href="https://wa.me/79183268872?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" aria-label="Написать в WhatsApp">💬</a>
+    <a href="https://t.me/in4707?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn telegram" aria-label="Написать в Telegram">✈️</a>
+</div>
+
+<!-- ============================================================
+     СКРИПТЫ
+     ============================================================ -->
+<script src="data.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ================================================================
+    // ЗАПОЛНЕНИЕ ВЫПАДАЮЩЕГО СПИСКА
+    // ================================================================
+    const select = document.getElementById('productSelect');
+    const form = document.getElementById('calcForm');
+    const resultDiv = document.getElementById('calcResult');
+
+    if (select && typeof data !== 'undefined' && data.products && data.products.corner) {
+        const corners = data.products.corner;
+        corners.forEach(p => {
+            const opt = document.createElement('option');
+            opt.value = p.id;
+            opt.textContent = `${p.title} (от ${p.priceMin} ₽/п.м.)`;
+            select.appendChild(opt);
+        });
+    }
+
+    // ================================================================
+    // ОБРАБОТКА ОТПРАВКИ ФОРМЫ
+    // ================================================================
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const consent = this.querySelector('input[name="personal_data_consent"]');
+            if (consent && !consent.checked) {
+                alert('Пожалуйста, дайте согласие на обработку персональных данных.');
+                return;
+            }
+
+            const productSelect = document.getElementById('productSelect');
+            const quantity = document.getElementById('quantity');
+            const city = document.getElementById('calcCity');
+            const phone = document.getElementById('calcPhone');
+
+            if (!productSelect.value || !quantity.value || !city.value || !phone.value) {
+                alert('Пожалуйста, заполните все поля.');
+                return;
+            }
+
+            let productName = '';
+            if (typeof data !== 'undefined' && data.products && data.products.corner) {
+                const found = data.products.corner.find(p => p.id == productSelect.value);
+                if (found) productName = found.title;
+            }
+
+            const msg = `Здравствуйте! Хочу получить расчёт через калькулятор:\n` +
+                       `Товар: ${productName}\n` +
+                       `Количество: ${quantity.value} п.м.\n` +
+                       `Город: ${city.value}\n` +
+                       `Телефон: ${phone.value}`;
+
+            const whatsapp = (typeof data !== 'undefined' && data.company && data.company.whatsapp)
+                ? data.company.whatsapp
+                : '79183268872';
+
+            window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+
+            // Отправка в Telegram
+            const botToken = ''; // Вставьте токен бота
+            const chatId = ''; // Вставьте ID чата
+            if (botToken && chatId) {
+                fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: `🧮 РАСЧЁТ С КАЛЬКУЛЯТОРА:\n\nТовар: ${productName}\nКоличество: ${quantity.value} п.м.\nГород: ${city.value}\nТелефон: ${phone.value}`,
+                        parse_mode: 'HTML'
+                    })
+                }).catch(err => console.warn('Telegram отправка не удалась:', err));
+            }
+
+            resultDiv.classList.add('show');
+            form.reset();
+
+            setTimeout(() => {
+                resultDiv.classList.remove('show');
+            }, 10000);
+        });
+    }
+
+    // ================================================================
+    // МОБИЛЬНОЕ МЕНЮ
+    // ================================================================
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) {
+                nav.classList.toggle('open');
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>
