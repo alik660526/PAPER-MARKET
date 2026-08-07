@@ -1,7 +1,7 @@
 /* ================================================================
-   Модуль: Меню v3.0
+   Модуль: Меню v4.0
    Десктоп: выпадашка «Связаться»
-   Мобильные: выезжающая панель справа с подменю
+   Мобильные: гамбургер, выпадающее меню, смена иконки
    ================================================================ */
 
 (function () {
@@ -24,60 +24,53 @@
             });
         }
 
-        // --- Мобильная панель ---
+        // --- Мобильное меню ---
         var burger = document.getElementById('mobileMenuToggle');
-        var overlay = document.getElementById('mobileOverlay');
-        var panel = document.getElementById('mobilePanel');
-        var closeBtn = document.getElementById('mobilePanelClose');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var menuLinks = mobileMenu ? mobileMenu.querySelectorAll('.mobile-menu__link') : [];
 
-        function openPanel() {
-            if (overlay) overlay.classList.add('mobile-overlay--open');
-            if (panel) panel.classList.add('mobile-panel--open');
-            document.body.style.overflow = 'hidden';
+        function openMenu() {
+            if (burger) burger.classList.add('header__burger--open');
+            if (mobileMenu) mobileMenu.classList.add('mobile-menu--open');
         }
 
-        function closePanel() {
-            if (overlay) overlay.classList.remove('mobile-overlay--open');
-            if (panel) panel.classList.remove('mobile-panel--open');
-            document.body.style.overflow = '';
+        function closeMenu() {
+            if (burger) burger.classList.remove('header__burger--open');
+            if (mobileMenu) mobileMenu.classList.remove('mobile-menu--open');
+        }
+
+        function toggleMenu() {
+            if (mobileMenu && mobileMenu.classList.contains('mobile-menu--open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         }
 
         if (burger) {
-            burger.addEventListener('click', openPanel);
+            burger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                toggleMenu();
+            });
         }
 
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closePanel);
-        }
-
-        if (overlay) {
-            overlay.addEventListener('click', closePanel);
-        }
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && panel && panel.classList.contains('mobile-panel--open')) {
-                closePanel();
-            }
-        });
-
-        // --- Подменю в мобильной панели ---
-        var subToggles = document.querySelectorAll('.mobile-panel__link--sub');
-
-        subToggles.forEach(function (toggle) {
-            toggle.addEventListener('click', function () {
-                var sublist = this.nextElementSibling;
-                var arrow = this.querySelector('.mobile-panel__arrow');
-
-                if (sublist) {
-                    sublist.classList.toggle('mobile-panel__sublist--open');
-                }
-                if (arrow) {
-                    arrow.classList.toggle('mobile-panel__arrow--open');
-                }
+        // Закрытие по клику на пункт меню
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                closeMenu();
             });
         });
 
-        // --- Копирование email на мобильных ---
+        // Закрытие по клику вне меню
+        document.addEventListener('click', function (e) {
+            if (mobileMenu && mobileMenu.classList.contains('mobile-menu--open')) {
+                if (!mobileMenu.contains(e.target) && e.target !== burger) {
+                    closeMenu();
+                }
+            }
+        });
+
+        // Копирование email на мобильных
         window.copyEmail = function (event) {
             var email = 'papir-market.sale@mail.ru';
             var link = event.currentTarget;

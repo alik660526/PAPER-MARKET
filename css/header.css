@@ -1,6 +1,6 @@
 /* ================================================================
-   UI Kit — Header (Шапка) v3.0
-   Выезжающая мобильная панель справа, увеличенная высота
+   UI Kit — Header (Шапка) v4.0
+   Мобильное меню: гамбургер, выпадающий блок, смена иконки
    ================================================================ */
 
 .header {
@@ -48,7 +48,7 @@
     white-space: nowrap;
 }
 
-/* --- Навигация --- */
+/* --- Навигация (десктоп) --- */
 
 .header__nav {
     flex-shrink: 1;
@@ -85,7 +85,7 @@
     color: var(--primary);
 }
 
-/* --- Выпадающее подменю --- */
+/* --- Выпадающее подменю (десктоп) --- */
 
 .header__submenu {
     display: none;
@@ -126,7 +126,7 @@
     color: var(--primary);
 }
 
-/* --- Правая часть --- */
+/* --- Правая часть (десктоп) --- */
 
 .header__right {
     display: flex;
@@ -185,191 +185,101 @@
     background: var(--primary-light);
 }
 
-/* --- Бургер --- */
+/* --- Бургер-кнопка --- */
 
 .header__burger {
     display: none;
-    width: 52px;
-    height: 52px;
-    font-size: 2rem;
+    width: 44px;
+    height: 44px;
+    position: relative;
     cursor: pointer;
-    color: var(--text-primary);
-    line-height: 1;
     background: none;
-    border: none;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
     padding: 0;
-    align-items: center;
-    justify-content: center;
+    flex-shrink: 0;
 }
 
-/* --- Оверлей --- */
+.header__burger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    position: absolute;
+    left: 9px;
+    transition: all 0.3s ease;
+}
 
-.mobile-overlay {
+.header__burger-line:nth-child(1) { top: 12px; }
+.header__burger-line:nth-child(2) { top: 20px; }
+.header__burger-line:nth-child(3) { top: 28px; }
+
+/* Крестик */
+.header__burger--open .header__burger-line:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+.header__burger--open .header__burger-line:nth-child(2) {
+    opacity: 0;
+}
+.header__burger--open .header__burger-line:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+/* --- Мобильное меню --- */
+
+.mobile-menu {
     display: none;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1999;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.mobile-overlay--open {
-    display: block;
-    opacity: 1;
-}
-
-/* --- Выезжающая панель --- */
-
-.mobile-panel {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-body);
-    z-index: 2000;
-    transition: right 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
-
-.mobile-panel--open {
-    right: 0;
-}
-
-.mobile-panel__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 20px;
+    background: var(--bg-white);
     border-bottom: 1px solid var(--border-light);
-}
-
-.mobile-panel__logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-
-.mobile-panel__close {
-    width: 52px;
-    height: 52px;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: var(--text-primary);
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.mobile-panel__body {
-    flex: 1;
+    box-shadow: var(--shadow-card);
+    z-index: 999;
     padding: 10px 0;
 }
 
-.mobile-panel__list {
+.mobile-menu--open {
+    display: block;
+}
+
+.mobile-menu__list {
     list-style: none;
-    padding: 0;
+    padding: 0 20px;
     margin: 0;
 }
 
-.mobile-panel__item {
+.mobile-menu__item {
     border-bottom: 1px solid var(--border-light);
 }
 
-.mobile-panel__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-decoration: none;
-    min-height: 60px;
+.mobile-menu__item:last-child {
+    border-bottom: none;
 }
 
-.mobile-panel__link--sub {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--text-primary);
-    cursor: pointer;
-}
-
-.mobile-panel__arrow {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    transition: transform 0.3s;
-}
-
-.mobile-panel__arrow--open {
-    transform: rotate(90deg);
-}
-
-/* --- Подменю в панели --- */
-
-.mobile-panel__sublist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background: var(--bg-gray);
-}
-
-.mobile-panel__sublist--open {
-    max-height: 500px;
-}
-
-.mobile-panel__sublink {
+.mobile-menu__link {
     display: block;
-    padding: 16px 20px 16px 40px;
-    font-size: 18px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    border-top: 1px solid var(--border-light);
-}
-
-.mobile-panel__sublink--contact {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 16px 20px;
-    font-size: 18px;
+    padding: 16px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: var(--text-primary);
     text-decoration: none;
-    border-top: 1px solid var(--border-light);
 }
 
-/* --- CTA и контакты в панели --- */
-
-.mobile-panel__cta {
-    padding: 20px;
-    border-top: 1px solid var(--border-light);
+.mobile-menu__link:hover {
+    color: var(--primary);
 }
 
-.mobile-panel__cta .btn {
+/* Кнопка CTA в мобильном меню */
+.mobile-menu__cta {
+    padding: 15px 20px 5px;
+}
+
+.mobile-menu__cta .btn {
     width: 100%;
-}
-
-.mobile-panel__contacts {
-    padding: 0 20px 20px;
-}
-
-.mobile-panel__contacts-title {
-    font-size: 14px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px 0;
 }
 
 /* --- Адаптив --- */
@@ -418,7 +328,7 @@
         display: none;
     }
     .header__burger {
-        display: flex;
+        display: block;
     }
 }
 

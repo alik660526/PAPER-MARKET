@@ -68,48 +68,27 @@
                 </ul>
             </div>
             <a href="calculator.html" class="btn btn--primary btn--small">Получить расчёт</a>
-            <button class="header__burger" id="mobileMenuToggle" aria-label="Меню">☰</button>
+            <button class="header__burger" id="mobileMenuToggle" aria-label="Меню">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__item"><a href="catalog.html" class="mobile-menu__link">Продукция</a></li>
+            <li class="mobile-menu__item"><a href="calculator.html" class="mobile-menu__link">Калькулятор</a></li>
+            <li class="mobile-menu__item"><a href="delivery.html" class="mobile-menu__link">Доставка</a></li>
+            <li class="mobile-menu__item"><a href="docs.html" class="mobile-menu__link">О компании</a></li>
+            <li class="mobile-menu__item"><a href="contacts.html" class="mobile-menu__link">Контакты</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link" id="mobileContactToggle">Связаться</a></li>
+        </ul>
+        <div class="mobile-menu__cta">
+            <a href="calculator.html" class="btn btn--primary">Получить расчёт</a>
         </div>
     </div>
 </header>
-
-<div class="mobile-overlay" id="mobileOverlay"></div>
-
-<div class="mobile-panel" id="mobilePanel">
-    <div class="mobile-panel__header">
-        <span class="mobile-panel__logo">ПАПИР-МАРКЕТ</span>
-        <button class="mobile-panel__close" id="mobilePanelClose" aria-label="Закрыть">✕</button>
-    </div>
-    <div class="mobile-panel__body">
-        <ul class="mobile-panel__list">
-            <li class="mobile-panel__item"><a href="catalog.html" class="mobile-panel__link">Продукция</a></li>
-            <li class="mobile-panel__item"><a href="calculator.html" class="mobile-panel__link">Калькулятор</a></li>
-            <li class="mobile-panel__item"><a href="delivery.html" class="mobile-panel__link">Доставка</a></li>
-            <li class="mobile-panel__item">
-                <span class="mobile-panel__link mobile-panel__link--sub">О компании <span class="mobile-panel__arrow">›</span></span>
-                <ul class="mobile-panel__sublist">
-                    <li><a href="docs.html" class="mobile-panel__sublink">Документы</a></li>
-                    <li><a href="docs.html#requisites" class="mobile-panel__sublink">Реквизиты</a></li>
-                </ul>
-            </li>
-            <li class="mobile-panel__item">
-                <span class="mobile-panel__link mobile-panel__link--sub">Контакты <span class="mobile-panel__arrow">›</span></span>
-                <ul class="mobile-panel__sublist">
-                    <li><a href="find-us.html" class="mobile-panel__sublink">Как нас найти</a></li>
-                    <li><a href="contacts.html" class="mobile-panel__sublink">Обратная связь</a></li>
-                    <li><a href="tel:+79183268872" class="mobile-panel__sublink--contact">📞 Позвонить</a></li>
-                    <li><a href="https://wa.me/79183268872" target="_blank" class="mobile-panel__sublink--contact">💬 WhatsApp</a></li>
-                    <li><a href="https://t.me/in4707" target="_blank" class="mobile-panel__sublink--contact">✈️ Telegram</a></li>
-                    <li><a href="https://max.ru/u/f9LHodD0cOIfgPjBWE36gqLHHnqx_eLLEiDTfCqlZlp0vHJeo3fCOZFGd6I" target="_blank" class="mobile-panel__sublink--contact">Ⓜ️ MAX</a></li>
-                    <li><a href="mailto:papir-market.sale@mail.ru" class="mobile-panel__sublink--contact" onclick="copyEmail(event)">✉️ E-mail: papir-market.sale@mail.ru</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="mobile-panel__cta">
-        <a href="calculator.html" class="btn btn--primary">Получить расчёт</a>
-    </div>
-</div>
 
 <main style="padding:100px 0;" data-section-name="Как нас найти">
     <div class="container">
