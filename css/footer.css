@@ -1,0 +1,85 @@
+/* ================================================================
+   UI Kit — Footer (Подвал)
+   Версия: 1.0
+   ================================================================ */
+
+.footer {
+    background: var(--bg-footer);
+    color: var(--text-footer);
+    padding: 50px 0 25px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer__col-title {
+    color: #E8EBE7;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.footer__text {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__links li {
+    margin-bottom: 8px;
+}
+
+.footer__links a {
+    color: var(--text-footer);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer__links a:hover {
+    color: #fff;
+}
+
+.footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer__contact-link {
+    color: var(--text-footer);
+    text-decoration: none;
+}
+
+.footer__contact-link:hover {
+    color: #fff;
+}
+
+/* --- Адаптив --- */
+
+@media (max-width: 992px) {
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,41 @@
+/* ================================================================
+   UI Kit — Floating Buttons (Плавающие кнопки)
+   Версия: 1.0
+   ================================================================ */
+
+.floating {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+}
+
+.floating__btn {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.floating__btn:hover {
+    transform: scale(1.1);
+}
+
+.floating__btn--whatsapp {
+    background: #25d366;
+}
+
+.floating__btn--telegram {
+    background: #0088cc;
+}

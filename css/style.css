@@ -1,0 +1,28 @@
+/* ================================================================
+   PAPER MARKET 2.0 — Главный файл стилей
+   Импортирует все модули UI Kit
+   Версия: 2.0
+   ================================================================ */
+
+/* --- Переменные и сброс --- */
+@import 'variables.css';
+@import 'base.css';
+
+/* --- Компоненты UI Kit --- */
+@import 'layout.css';
+@import 'header.css';
+@import 'hero.css';
+@import 'buttons.css';
+@import 'cards.css';
+@import 'forms.css';
+@import 'tables.css';
+@import 'footer.css';
+@import 'floating.css';
+@import 'gallery.css';
+@import 'animations.css';
+
+/* --- Dev Mode --- */
+@import 'dev-mode.css';
+
+/* --- Адаптивность --- */
+@import 'responsive.css';

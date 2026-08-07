@@ -1,0 +1,152 @@
+/* ================================================================
+   UI Kit — Responsive (Адаптивность)
+   Версия: 1.0
+   ================================================================ */
+
+/* --- Ноутбуки (≤ 1200px) --- */
+
+@media (max-width: 1200px) {
+    .hero__title {
+        font-size: 3.2rem;
+    }
+    .header__logo-sub {
+        display: none;
+    }
+    .header__menu {
+        gap: 12px;
+    }
+    .header__menu-link {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Планшеты (≤ 992px) --- */
+
+@media (max-width: 992px) {
+    .header__phone {
+        display: none;
+    }
+    .header__menu {
+        gap: 10px;
+    }
+    .header__menu-link {
+        font-size: 0.8rem;
+    }
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* --- Мобильные (≤ 768px) --- */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    .section {
+        padding: 70px 0;
+    }
+    .section__title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+    .hero__title {
+        font-size: 2rem;
+    }
+    .hero__subtitle {
+        font-size: 1.1rem;
+    }
+    .hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .header__logo {
+        flex: 1;
+    }
+    .header__burger {
+        display: block;
+    }
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-white);
+        padding: 20px;
+        box-shadow: var(--shadow-card);
+        gap: 12px;
+        border-bottom: 1px solid var(--border-light);
+        z-index: 999;
+    }
+    .header__menu--open {
+        display: flex;
+    }
+    .header__menu-link {
+        font-size: 1rem;
+    }
+    .header__right .btn {
+        display: none;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    .card__image {
+        height: 220px;
+    }
+    .card--featured {
+        transform: none;
+    }
+
+    .form-container {
+        padding: 24px;
+    }
+
+    .footer {
+        padding: 40px 0 20px;
+    }
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .table {
+        min-width: 600px;
+        font-size: 0.8rem;
+    }
+    .table th,
+    .table td {
+        padding: 8px 6px;
+    }
+}
+
+/* --- Маленькие мобильные (≤ 480px) --- */
+
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 1.6rem;
+    }
+    .header {
+        padding: 8px 0;
+    }
+    .header__logo-text {
+        font-size: 1.2rem;
+    }
+}

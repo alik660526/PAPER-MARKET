@@ -1,0 +1,362 @@
+/* ================================================================
+   UI Kit — Header (Шапка) v2.0
+   Компактное меню, выпадающие подменю, кнопка «Связаться»
+   ================================================================ */
+
+.header {
+    background: var(--bg-header);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+/* --- Логотип --- */
+
+.header__logo {
+    flex-shrink: 0;
+}
+
+.header__logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.header__logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.header__logo-sub {
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+/* --- Навигация --- */
+
+.header__nav {
+    flex-shrink: 1;
+}
+
+.header__menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu-item {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu-link {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 8px 0;
+    transition: color 0.25s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header__menu-link:hover,
+.header__menu-link--active {
+    color: var(--primary);
+}
+
+/* --- Выпадающее подменю --- */
+
+.header__submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: var(--shadow-card-hover);
+    border: 1px solid var(--border-light);
+    padding: 8px 0;
+    min-width: 200px;
+    z-index: 1001;
+    list-style: none;
+}
+
+.header__menu-item:hover .header__submenu {
+    display: block;
+}
+
+.header__submenu-item {
+    margin: 0;
+    padding: 0;
+}
+
+.header__submenu-link {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+}
+
+.header__submenu-link:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+/* --- Правая часть --- */
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Кнопка «Связаться» */
+.header__contact-btn {
+    position: relative;
+}
+
+.header__contact-toggle {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.header__contact-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: var(--shadow-card-hover);
+    border: 1px solid var(--border-light);
+    padding: 8px 0;
+    min-width: 220px;
+    z-index: 1001;
+    list-style: none;
+}
+
+.header__contact-dropdown--open {
+    display: block;
+}
+
+.header__contact-item {
+    margin: 0;
+    padding: 0;
+}
+
+.header__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.header__contact-link:hover {
+    background: var(--primary-light);
+}
+
+/* --- Бургер --- */
+
+.header__burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* --- Мобильное меню (полноэкранное) --- */
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-body);
+    z-index: 2000;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.mobile-menu--open {
+    display: flex;
+}
+
+.mobile-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-menu__logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.mobile-menu__close {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+.mobile-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu__item {
+    margin-bottom: 5px;
+}
+
+.mobile-menu__link {
+    display: block;
+    padding: 14px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-menu__sublist {
+    list-style: none;
+    padding: 0 0 10px 15px;
+    margin: 0;
+}
+
+.mobile-menu__sublink {
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.mobile-menu__cta {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.mobile-menu__cta .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mobile-menu__contacts {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-light);
+}
+
+.mobile-menu__contacts a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+/* --- Адаптив --- */
+
+@media (max-width: 1200px) {
+    .header__logo-sub {
+        display: none;
+    }
+    .header__menu {
+        gap: 14px;
+    }
+    .header__menu-link {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header__menu {
+        gap: 10px;
+    }
+    .header__menu-link {
+        font-size: 0.8rem;
+    }
+    .header__contact-toggle {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .header__logo {
+        flex: 1;
+    }
+    .header__nav {
+        display: none;
+    }
+    .header__right .btn--primary {
+        display: none;
+    }
+    .header__contact-btn {
+        display: none;
+    }
+    .header__burger {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 0;
+    }
+    .header__logo-text {
+        font-size: 1.2rem;
+    }
+}

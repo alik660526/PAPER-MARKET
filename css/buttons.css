@@ -1,0 +1,105 @@
+/* ================================================================
+   UI Kit — Buttons (Кнопки)
+   Версия: 1.0
+   ================================================================ */
+
+.btn {
+    display: inline-block;
+    padding: 16px 34px;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: center;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* --- Размеры --- */
+
+.btn--small {
+    padding: 8px 20px;
+    font-size: 15px;
+}
+
+.btn--large {
+    padding: 20px 44px;
+    font-size: 19px;
+}
+
+/* --- Типы --- */
+
+/* Основная (красная) */
+.btn--primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(198, 40, 40, 0.25);
+}
+.btn--primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(198, 40, 40, 0.35);
+}
+
+/* Контурная (красная рамка) */
+.btn--outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+.btn--outline:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Светлая контурная (для тёмных фонов) */
+.btn--outline-light {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.btn--outline-light:hover {
+    background: #fff;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Вторичная (светло-красный фон) */
+.btn--secondary {
+    background: var(--primary-light);
+    color: var(--primary);
+    border: 1px solid var(--border-color);
+}
+.btn--secondary:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Крафтовая */
+.btn--craft {
+    background: var(--craft);
+    color: #fff;
+}
+.btn--craft:hover {
+    background: var(--craft-dark);
+    transform: translateY(-3px);
+}
+
+/* --- Заблокированная кнопка --- */
+.btn:disabled,
+.btn--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* --- Полная ширина --- */
+.btn--full {
+    width: 100%;
+}

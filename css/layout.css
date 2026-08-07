@@ -1,0 +1,53 @@
+/* ================================================================
+   UI Kit — Layout (Контейнер, секции, сетка)
+   Версия: 1.0
+   ================================================================ */
+
+/* --- Контейнер --- */
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* --- Секции --- */
+
+.section {
+    padding: 100px 0;
+}
+
+.section--gray {
+    background: var(--bg-gray);
+}
+
+.section--accent {
+    background: var(--primary-light);
+}
+
+/* --- Заголовок секции --- */
+
+.section__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+/* --- Адаптив --- */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    .section {
+        padding: 70px 0;
+    }
+    .section__title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+}
