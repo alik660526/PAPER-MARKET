@@ -1,12 +1,12 @@
 /* ================================================================
-   UI Kit — Header (Шапка) v2.0
-   Компактное меню, выпадающие подменю, кнопка «Связаться»
+   UI Kit — Header (Шапка) v3.0
+   Выезжающая мобильная панель справа, увеличенная высота
    ================================================================ */
 
 .header {
     background: var(--bg-header);
     backdrop-filter: blur(10px);
-    padding: 10px 0;
+    padding: 14px 0;
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.03);
     position: sticky;
     top: 0;
@@ -136,7 +136,6 @@
     white-space: nowrap;
 }
 
-/* Кнопка «Связаться» */
 .header__contact-btn {
     position: relative;
 }
@@ -157,7 +156,7 @@
     box-shadow: var(--shadow-card-hover);
     border: 1px solid var(--border-light);
     padding: 8px 0;
-    min-width: 220px;
+    min-width: 260px;
     z-index: 1001;
     list-style: none;
 }
@@ -190,6 +189,8 @@
 
 .header__burger {
     display: none;
+    width: 52px;
+    height: 52px;
     font-size: 2rem;
     cursor: pointer;
     color: var(--text-primary);
@@ -197,110 +198,178 @@
     background: none;
     border: none;
     padding: 0;
+    align-items: center;
+    justify-content: center;
 }
 
-/* --- Мобильное меню (полноэкранное) --- */
+/* --- Оверлей --- */
 
-.mobile-menu {
+.mobile-overlay {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-overlay--open {
+    display: block;
+    opacity: 1;
+}
+
+/* --- Выезжающая панель --- */
+
+.mobile-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
     background: var(--bg-body);
     z-index: 2000;
+    transition: right 0.3s ease;
+    display: flex;
     flex-direction: column;
-    padding: 20px;
     overflow-y: auto;
 }
 
-.mobile-menu--open {
-    display: flex;
+.mobile-panel--open {
+    right: 0;
 }
 
-.mobile-menu__header {
+.mobile-panel__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
+    padding: 14px 20px;
     border-bottom: 1px solid var(--border-light);
 }
 
-.mobile-menu__logo {
+.mobile-panel__logo {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.mobile-menu__close {
-    font-size: 2rem;
+.mobile-panel__close {
+    width: 52px;
+    height: 52px;
+    font-size: 1.8rem;
     cursor: pointer;
     color: var(--text-primary);
     background: none;
     border: none;
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.mobile-menu__list {
+.mobile-panel__body {
+    flex: 1;
+    padding: 10px 0;
+}
+
+.mobile-panel__list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.mobile-menu__item {
-    margin-bottom: 5px;
-}
-
-.mobile-menu__link {
-    display: block;
-    padding: 14px 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-decoration: none;
+.mobile-panel__item {
     border-bottom: 1px solid var(--border-light);
 }
 
-.mobile-menu__sublist {
-    list-style: none;
-    padding: 0 0 10px 15px;
-    margin: 0;
+.mobile-panel__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    min-height: 60px;
 }
 
-.mobile-menu__sublink {
+.mobile-panel__link--sub {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.mobile-panel__arrow {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.3s;
+}
+
+.mobile-panel__arrow--open {
+    transform: rotate(90deg);
+}
+
+/* --- Подменю в панели --- */
+
+.mobile-panel__sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: var(--bg-gray);
+}
+
+.mobile-panel__sublist--open {
+    max-height: 500px;
+}
+
+.mobile-panel__sublink {
     display: block;
-    padding: 10px 0;
-    font-size: 1rem;
+    padding: 16px 20px 16px 40px;
+    font-size: 18px;
     color: var(--text-secondary);
     text-decoration: none;
-}
-
-.mobile-menu__cta {
-    margin-top: auto;
-    padding-top: 20px;
-}
-
-.mobile-menu__cta .btn {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.mobile-menu__contacts {
-    margin-top: 20px;
-    padding-top: 20px;
     border-top: 1px solid var(--border-light);
 }
 
-.mobile-menu__contacts a {
+.mobile-panel__sublink--contact {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 0;
-    font-size: 1rem;
+    gap: 12px;
+    padding: 16px 20px;
+    font-size: 18px;
     color: var(--text-primary);
     text-decoration: none;
+    border-top: 1px solid var(--border-light);
+}
+
+/* --- CTA и контакты в панели --- */
+
+.mobile-panel__cta {
+    padding: 20px;
+    border-top: 1px solid var(--border-light);
+}
+
+.mobile-panel__cta .btn {
+    width: 100%;
+}
+
+.mobile-panel__contacts {
+    padding: 0 20px 20px;
+}
+
+.mobile-panel__contacts-title {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0;
 }
 
 /* --- Адаптив --- */
@@ -331,8 +400,11 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 10px 0;
+    }
     .header__container {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 10px;
     }
     .header__logo {
@@ -341,14 +413,12 @@
     .header__nav {
         display: none;
     }
-    .header__right .btn--primary {
-        display: none;
-    }
+    .header__right .btn--primary,
     .header__contact-btn {
         display: none;
     }
     .header__burger {
-        display: block;
+        display: flex;
     }
 }
 

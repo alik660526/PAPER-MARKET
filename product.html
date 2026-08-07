@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <meta name="description" content="Карточка товара ООО «ПАПИР-МАРКЕТ». Защитные картонные уголки, флютинг, картон. Характеристики, цены, заказ, тестовые образцы.">
     <title>Карточка товара – ООО «ПАПИР-МАРКЕТ»</title>
     <link rel="canonical" href="https://papir-market.ru/product.html">
@@ -15,23 +14,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-=======
-    <meta name="description" content="Карточка товара ООО «ПАПИР-МАРКЕТ». Защитные картонные уголки, флютинг, лайнер. Характеристики, цены, заказ, тестовые образцы.">
-    <title>Карточка товара – ООО «ПАПИР-МАРКЕТ»</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-
-    <!-- ============================================================
-         МИКРОРАЗМЕТКА SCHEMA.ORG
-         ============================================================ -->
->>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-<<<<<<< HEAD
             { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://papir-market.ru/" },
             { "@type": "ListItem", "position": 2, "name": "Каталог", "item": "https://papir-market.ru/catalog.html" },
             { "@type": "ListItem", "position": 3, "name": "Товар", "item": "https://papir-market.ru/product.html" }
@@ -77,6 +64,7 @@
                     <li class="header__contact-item"><a href="tel:+79183268872" class="header__contact-link">📞 Позвонить</a></li>
                     <li class="header__contact-item"><a href="https://wa.me/79183268872" target="_blank" class="header__contact-link">💬 WhatsApp</a></li>
                     <li class="header__contact-item"><a href="https://t.me/in4707" target="_blank" class="header__contact-link">✈️ Telegram</a></li>
+                    <li class="header__contact-item"><a href="https://max.ru/u/f9LHodD0cOIfgPjBWE36gqLHHnqx_eLLEiDTfCqlZlp0vHJeo3fCOZFGd6I" target="_blank" class="header__contact-link">Ⓜ️ MAX</a></li>
                     <li class="header__contact-item"><a href="mailto:papir-market.sale@mail.ru" class="header__contact-link">✉️ E-mail</a></li>
                 </ul>
             </div>
@@ -86,39 +74,41 @@
     </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu__header">
-        <span class="mobile-menu__logo">ПАПИР-МАРКЕТ</span>
-        <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Закрыть">✕</button>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel__header">
+        <span class="mobile-panel__logo">ПАПИР-МАРКЕТ</span>
+        <button class="mobile-panel__close" id="mobilePanelClose" aria-label="Закрыть">✕</button>
     </div>
-    <ul class="mobile-menu__list">
-        <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Главная</a></li>
-        <li class="mobile-menu__item"><a href="catalog.html" class="mobile-menu__link">Продукция</a></li>
-        <li class="mobile-menu__item"><a href="calculator.html" class="mobile-menu__link">Калькулятор</a></li>
-        <li class="mobile-menu__item"><a href="delivery.html" class="mobile-menu__link">Доставка</a></li>
-        <li class="mobile-menu__item">
-            <span class="mobile-menu__link" style="border-bottom:none;">О компании</span>
-            <ul class="mobile-menu__sublist">
-                <li><a href="docs.html" class="mobile-menu__sublink">Документы</a></li>
-                <li><a href="docs.html#requisites" class="mobile-menu__sublink">Реквизиты</a></li>
-            </ul>
-        </li>
-        <li class="mobile-menu__item">
-            <span class="mobile-menu__link" style="border-bottom:none;">Контакты</span>
-            <ul class="mobile-menu__sublist">
-                <li><a href="find-us.html" class="mobile-menu__sublink">Как нас найти</a></li>
-                <li><a href="contacts.html" class="mobile-menu__sublink">Обратная связь</a></li>
-            </ul>
-        </li>
-    </ul>
-    <div class="mobile-menu__cta">
+    <div class="mobile-panel__body">
+        <ul class="mobile-panel__list">
+            <li class="mobile-panel__item"><a href="catalog.html" class="mobile-panel__link">Продукция</a></li>
+            <li class="mobile-panel__item"><a href="calculator.html" class="mobile-panel__link">Калькулятор</a></li>
+            <li class="mobile-panel__item"><a href="delivery.html" class="mobile-panel__link">Доставка</a></li>
+            <li class="mobile-panel__item">
+                <span class="mobile-panel__link mobile-panel__link--sub">О компании <span class="mobile-panel__arrow">›</span></span>
+                <ul class="mobile-panel__sublist">
+                    <li><a href="docs.html" class="mobile-panel__sublink">Документы</a></li>
+                    <li><a href="docs.html#requisites" class="mobile-panel__sublink">Реквизиты</a></li>
+                </ul>
+            </li>
+            <li class="mobile-panel__item">
+                <span class="mobile-panel__link mobile-panel__link--sub">Контакты <span class="mobile-panel__arrow">›</span></span>
+                <ul class="mobile-panel__sublist">
+                    <li><a href="find-us.html" class="mobile-panel__sublink">Как нас найти</a></li>
+                    <li><a href="contacts.html" class="mobile-panel__sublink">Обратная связь</a></li>
+                    <li><a href="tel:+79183268872" class="mobile-panel__sublink--contact">📞 Позвонить</a></li>
+                    <li><a href="https://wa.me/79183268872" target="_blank" class="mobile-panel__sublink--contact">💬 WhatsApp</a></li>
+                    <li><a href="https://t.me/in4707" target="_blank" class="mobile-panel__sublink--contact">✈️ Telegram</a></li>
+                    <li><a href="https://max.ru/u/f9LHodD0cOIfgPjBWE36gqLHHnqx_eLLEiDTfCqlZlp0vHJeo3fCOZFGd6I" target="_blank" class="mobile-panel__sublink--contact">Ⓜ️ MAX</a></li>
+                    <li><a href="mailto:papir-market.sale@mail.ru" class="mobile-panel__sublink--contact" onclick="copyEmail(event)">✉️ E-mail: papir-market.sale@mail.ru</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="mobile-panel__cta">
         <a href="calculator.html" class="btn btn--primary">Получить расчёт</a>
-    </div>
-    <div class="mobile-menu__contacts">
-        <a href="tel:+79183268872">📞 Позвонить</a>
-        <a href="https://wa.me/79183268872" target="_blank">💬 WhatsApp</a>
-        <a href="https://t.me/in4707" target="_blank">✈️ Telegram</a>
-        <a href="mailto:papir-market.sale@mail.ru">✉️ E-mail</a>
     </div>
 </div>
 
@@ -152,312 +142,10 @@
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Продукция</a></li>
                     <li><a href="price.html">Прайс-лист</a></li>
-=======
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Главная",
-                "item": "https://papir-market.ru/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Каталог",
-                "item": "https://papir-market.ru/catalog.html"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Товар",
-                "item": "https://papir-market.ru/product.html"
-            }
-        ]
-    }
-    </script>
-
-    <style>
-        .product-detail {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: flex-start;
-        }
-        .product-detail .gallery {
-            flex: 1;
-            min-width: 280px;
-        }
-        .product-detail .gallery img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: var(--shadow-card);
-        }
-        .product-detail .info {
-            flex: 2;
-            min-width: 280px;
-        }
-        .product-detail .info h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-        .product-detail .info .description {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            margin: 15px 0;
-        }
-        .product-detail .info .price-large {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 20px 0;
-        }
-        .product-detail .info .actions {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-        .product-detail .info .disclaimer-small {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 15px;
-        }
-
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: var(--bg-card);
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-        }
-        .specs-table td {
-            padding: 12px 18px;
-            border-bottom: 1px solid var(--border-light);
-        }
-        .specs-table tr:last-child td {
-            border-bottom: none;
-        }
-        .specs-table .label {
-            font-weight: 600;
-            color: var(--text-secondary);
-            width: 40%;
-            background: var(--bg-gray);
-        }
-        .specs-table .value {
-            color: var(--text-primary);
-        }
-
-        .application-block {
-            background: var(--bg-light-green);
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border-left: 4px solid var(--primary);
-        }
-        .application-block h3 {
-            margin-top: 0;
-        }
-        .application-block p {
-            margin: 10px 0 0 0;
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .benefits-grid .benefit {
-            padding: 10px 14px;
-            background: var(--bg-gray);
-            border-radius: 4px;
-            border: 1px solid var(--border-light);
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .samples-request-block {
-            background: var(--bg-light-green);
-            padding: 25px;
-            border-radius: 8px;
-            margin-top: 30px;
-            border: 1px solid var(--border-color);
-            text-align: center;
-        }
-        .samples-request-block h3 {
-            margin-top: 0;
-        }
-        .samples-request-block p {
-            margin-bottom: 15px;
-            color: var(--text-secondary);
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .related-item {
-            background: var(--bg-card);
-            border-radius: 8px;
-            border: 1px solid var(--border-light);
-            padding: 15px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .related-item:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-card-hover);
-        }
-        .related-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-        .related-item h4 {
-            font-size: 0.95rem;
-            margin: 10px 0 5px;
-            color: var(--text-primary);
-        }
-        .related-item .price {
-            font-size: 0.85rem;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        .related-item .btn {
-            font-size: 0.85rem;
-            padding: 6px 16px;
-            margin-top: 8px;
-        }
-
-        .breadcrumbs {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 25px;
-        }
-        .breadcrumbs a {
-            color: var(--primary);
-        }
-        .breadcrumbs a:hover {
-            text-decoration: underline;
-        }
-        .breadcrumbs span {
-            margin: 0 6px;
-        }
-
-        @media (max-width: 768px) {
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            .product-detail .info h1 {
-                font-size: 1.5rem;
-            }
-            .product-detail .info .price-large {
-                font-size: 1.4rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<!-- ============================================================
-     ШАПКА
-     ============================================================ -->
-<header>
-    <div class="container header-container">
-        <div class="logo">
-            <a href="index.html">
-                <span class="logo-text">ПАПИР-МАРКЕТ</span>
-                <span class="logo-sub">Производитель упаковочных материалов</span>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html" class="active">Продукция</a></li>
-                <li><a href="price.html">Прайс-лист</a></li>
-                <li><a href="calculator.html">Калькулятор</a></li>
-                <li><a href="delivery.html">Доставка</a></li>
-                <li><a href="find-us.html">Как нас найти</a></li>
-                <li><a href="docs.html">Документы</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="header-right">
-            <a href="tel:+79183268872" class="header-phone">+7 918 326-88-72</a>
-            <a href="calculator.html" class="btn btn-primary btn-sm">Получить расчёт</a>
-        </div>
-        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">☰</div>
-    </div>
-</header>
-
-<!-- ============================================================
-     ОСНОВНОЙ КОНТЕНТ
-     ============================================================ -->
-<main style="padding:40px 0;">
-    <div class="container" id="productContainer">
-
-        <!-- Хлебные крошки -->
-        <div class="breadcrumbs">
-            <a href="index.html">Главная</a>
-            <span>›</span>
-            <a href="catalog.html">Каталог</a>
-            <span>›</span>
-            <span id="breadcrumbProduct">Товар</span>
-        </div>
-
-        <!-- Основная информация о товаре -->
-        <div id="productMain"></div>
-
-        <!-- Применение -->
-        <div id="productApplication" style="margin-top:40px;"></div>
-
-        <!-- Преимущества (только для уголков) -->
-        <div id="productBenefits" style="margin-top:40px;"></div>
-
-        <!-- Запрос тестовых образцов -->
-        <div id="productSamples" style="margin-top:40px;"></div>
-
-        <!-- Похожие товары -->
-        <div id="productRelated" style="margin-top:50px;"></div>
-
-    </div>
-</main>
-
-<!-- ============================================================
-     ПОДВАЛ
-     ============================================================ -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <h4>ООО «ПАПИР-МАРКЕТ»</h4>
-                <p style="font-size:0.9rem;">Производитель защитных картонных уголков, картона для гофрокартона и крафт-бумаги.</p>
-                <p><strong>ИНН:</strong> 2372025383</p>
-                <p><strong>ОГРН:</strong> 1192375033674</p>
-                <p><strong>Юридический адрес:</strong> 352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10</p>
-            </div>
-            <div>
-                <h4>Меню</h4>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Продукция</a></li>
-                    <li><a href="price.html">Прайс-лист</a></li>
-                    <li><a href="calculator.html">Калькулятор</a></li>
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="find-us.html">Как нас найти</a></li>
-                    <li><a href="docs.html">Документы</a></li>
->>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div>
-<<<<<<< HEAD
                 <h4 class="footer__col-title">Информация</h4>
                 <ul class="footer__links">
                     <li><a href="docs.html">Документы</a></li>
@@ -473,235 +161,10 @@
     </div>
 </footer>
 
-<div class="floating">
-    <a href="https://wa.me/79183268872" target="_blank" class="floating__btn floating__btn--whatsapp" aria-label="WhatsApp">💬</a>
-    <a href="https://t.me/in4707" target="_blank" class="floating__btn floating__btn--telegram" aria-label="Telegram">✈️</a>
-</div>
-
 <script src="data.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/product.js"></script>
 <script src="js/dev-mode.js"></script>
-=======
-                <h4>Информация</h4>
-                <ul>
-                    <li><a href="docs.html">Документы</a></li>
-                    <li><a href="policy.html">Политика конфиденциальности</a></li>
-                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
-                    <li><a href="sitemap.html">Карта сайта</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Контакты</h4>
-                <p><a href="tel:+79183268872">+7 918 326-88-72</a></p>
-                <p><a href="mailto:papir-market.sale@mail.ru">papir-market.sale@mail.ru</a></p>
-                <p>352244, Краснодарский край, г. Новокубанск, ул. Новаторов, д. 1/10</p>
-            </div>
-        </div>
-        <div class="footer-bottom">© 2026 ООО «ПАПИР-МАРКЕТ». Все права защищены.</div>
-    </div>
-</footer>
-
-<!-- ============================================================
-     ПЛАВАЮЩИЕ КНОПКИ
-     ============================================================ -->
-<div class="floating-buttons">
-    <a href="https://wa.me/79183268872?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" aria-label="Написать в WhatsApp">💬</a>
-    <a href="https://t.me/in4707?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn telegram" aria-label="Написать в Telegram">✈️</a>
-</div>
-
-<!-- ============================================================
-     СКРИПТЫ
-     ============================================================ -->
-<script src="data.js"></script>
-<script src="js/main.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // ================================================================
-    // ЗАГРУЗКА КАРТОЧКИ ТОВАРА
-    // ================================================================
-    const productContainer = document.getElementById('productContainer');
-    if (productContainer && typeof data !== 'undefined') {
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get('id');
-
-        if (id) {
-            const product = findProductById(id);
-            if (product) {
-                renderProduct(product);
-            } else {
-                productContainer.innerHTML = `
-                    <div style="text-align:center; padding:60px 0; color:var(--text-muted);">
-                        <p style="font-size:1.2rem;">Товар не найден.</p>
-                        <a href="catalog.html" class="btn btn-primary" style="margin-top:15px;">Вернуться в каталог</a>
-                    </div>
-                `;
-            }
-        } else {
-            productContainer.innerHTML = `
-                <div style="text-align:center; padding:60px 0; color:var(--text-muted);">
-                    <p style="font-size:1.2rem;">Товар не выбран.</p>
-                    <a href="catalog.html" class="btn btn-primary" style="margin-top:15px;">Перейти в каталог</a>
-                </div>
-            `;
-        }
-    }
-
-    // ================================================================
-    // МОБИЛЬНОЕ МЕНЮ
-    // ================================================================
-    const menuToggle = document.getElementById('mobileMenuToggle');
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            const nav = document.querySelector('nav ul');
-            if (nav) {
-                nav.classList.toggle('open');
-            }
-        });
-    }
-
-    // ================================================================
-    // ФУНКЦИЯ ПОИСКА ТОВАРА ПО ID
-    // ================================================================
-    function findProductById(id) {
-        if (typeof data === 'undefined' || !data.products) return null;
-        const all = [
-            ...data.products.corner,
-            ...data.products.fluting,
-            ...data.products.liner
-        ];
-        return all.find(p => String(p.id) === String(id)) || null;
-    }
-
-    // ================================================================
-    // ФУНКЦИЯ РЕНДЕРИНГА КАРТОЧКИ ТОВАРА
-    // ================================================================
-    function renderProduct(product) {
-        const mainContainer = document.getElementById('productMain');
-        const appContainer = document.getElementById('productApplication');
-        const benefitsContainer = document.getElementById('productBenefits');
-        const samplesContainer = document.getElementById('productSamples');
-        const relatedContainer = document.getElementById('productRelated');
-        const breadcrumb = document.getElementById('breadcrumbProduct');
-
-        if (!mainContainer) return;
-
-        if (breadcrumb) {
-            breadcrumb.textContent = product.title || 'Товар';
-        }
-
-        const imageSrc = product.image || 'images/zaglushki/no-image.webp';
-        const price = product.priceMin !== undefined && product.priceMin > 0
-            ? `от ${product.priceMin} ₽/п.м.`
-            : 'Цена по запросу';
-
-        // Основная информация
-        mainContainer.innerHTML = `
-            <div class="product-detail">
-                <div class="gallery">
-                    <img src="${imageSrc}" alt="${product.title}" onerror="this.src='images/zaglushki/no-image.webp'">
-                </div>
-                <div class="info">
-                    <h1>${product.title}</h1>
-                    ${product.description ? `<div class="description">${product.description}</div>` : ''}
-
-                    ${product.width || product.thickness ? `
-                    <table class="specs-table">
-                        <tbody>
-                            ${product.width ? `<tr><td class="label">Ширина</td><td class="value">${product.width} мм</td></tr>` : ''}
-                            ${product.thickness ? `<tr><td class="label">Толщина</td><td class="value">${product.thickness} мм</td></tr>` : ''}
-                            ${product.density ? `<tr><td class="label">Плотность</td><td class="value">${product.density}</td></tr>` : ''}
-                            ${product.rollWeight ? `<tr><td class="label">Вес рулона</td><td class="value">${product.rollWeight}</td></tr>` : ''}
-                        </tbody>
-                    </table>
-                    ` : ''}
-
-                    <div class="price-large">${price}</div>
-
-                    <div class="actions">
-                        <a href="calculator.html" class="btn btn-primary">Рассчитать стоимость</a>
-                        <a href="contacts.html" class="btn btn-secondary">Получить коммерческое предложение</a>
-                    </div>
-
-                    <div class="disclaimer-small">Не является публичной офертой.</div>
-                </div>
-            </div>
-        `;
-
-        // Применение
-        if (appContainer && product.application) {
-            appContainer.innerHTML = `
-                <div class="application-block">
-                    <h3>Область применения</h3>
-                    <p>${product.application}</p>
-                </div>
-            `;
-        } else if (appContainer) {
-            appContainer.innerHTML = '';
-        }
-
-        // Преимущества (только для уголков)
-        if (benefitsContainer && product.id && typeof product.id === 'number') {
-            benefitsContainer.innerHTML = `
-                <div style="background:var(--bg-card);padding:25px;border-radius:8px;border:1px solid var(--border-light);">
-                    <h3 style="margin-top:0;">Преимущества защитных картонных уголков</h3>
-                    <div class="benefits-grid">
-                        <div class="benefit">✅ Надёжная защита углов груза</div>
-                        <div class="benefit">✅ Укрепление коробок и паллет</div>
-                        <div class="benefit">✅ Снижение повреждений при транспортировке</div>
-                        <div class="benefit">✅ Экологичный и перерабатываемый материал</div>
-                    </div>
-                </div>
-            `;
-        } else if (benefitsContainer) {
-            benefitsContainer.innerHTML = '';
-        }
-
-        // Запрос тестовых образцов
-        if (samplesContainer) {
-            samplesContainer.innerHTML = `
-                <div class="samples-request-block">
-                    <h3>🧪 Хотите проверить качество?</h3>
-                    <p>Запросите тестовые образцы продукции, чтобы убедиться в качестве материалов.</p>
-                    <a href="index.html#samples" class="btn btn-primary">Запросить образцы</a>
-                </div>
-            `;
-        }
-
-        // Похожие товары (только для уголков)
-        if (relatedContainer && product.id && typeof product.id === 'number' && data.products && data.products.corner) {
-            const related = data.products.corner
-                .filter(p => p.id !== product.id)
-                .slice(0, 3);
-
-            if (related.length > 0) {
-                let html = `
-                    <h3 style="text-align:center;margin-bottom:25px;color:var(--text-primary);">С этим товаром также заказывают</h3>
-                    <div class="related-grid">
-                `;
-                related.forEach(p => {
-                    html += `
-                        <div class="related-item">
-                            <img src="${p.image || 'images/zaglushki/no-image.webp'}" alt="${p.title}" onerror="this.src='images/zaglushki/no-image.webp'">
-                            <h4>${p.title}</h4>
-                            <div class="price">от ${p.priceMin} ₽/п.м.</div>
-                            <a href="product.html?id=${p.id}" class="btn btn-secondary">Подробнее</a>
-                        </div>
-                    `;
-                });
-                html += `</div>`;
-                relatedContainer.innerHTML = html;
-            } else {
-                relatedContainer.innerHTML = '';
-            }
-        } else if (relatedContainer) {
-            relatedContainer.innerHTML = '';
-        }
-    }
-});
-</script>
->>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
 
 </body>
 </html>
