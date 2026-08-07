@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Документы ООО «ПАПИР-МАРКЕТ»: реквизиты, карточка предприятия, сертификаты.">
     <title>Документы – ООО «ПАПИР-МАРКЕТ»</title>
+<<<<<<< HEAD
     <link rel="canonical" href="https://papir-market.ru/docs.html">
     <meta property="og:title" content="Документы – ООО «ПАПИР-МАРКЕТ»">
     <meta property="og:description" content="Документы ООО «ПАПИР-МАРКЕТ»: реквизиты, карточка предприятия, сертификаты.">
@@ -14,11 +15,21 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+=======
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         МИКРОРАЗМЕТКА SCHEMA.ORG
+         ============================================================ -->
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
+<<<<<<< HEAD
             { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://papir-market.ru/" },
             { "@type": "ListItem", "position": 2, "name": "Документы", "item": "https://papir-market.ru/docs.html" }
         ]
@@ -149,10 +160,387 @@
                 <ul class="footer__links">
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Продукция</a></li>
+=======
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://papir-market.ru/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Документы",
+                "item": "https://papir-market.ru/docs.html"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .docs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .docs-card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-card);
+        }
+        .docs-card h3 {
+            margin-top: 0;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+        }
+        .docs-card p {
+            margin: 8px 0;
+            color: var(--text-secondary);
+        }
+        .docs-card .label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .docs-card .req-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .docs-card .req-item:last-child {
+            border-bottom: none;
+        }
+        .docs-card .req-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .docs-card .req-value {
+            color: var(--text-primary);
+            text-align: right;
+        }
+
+        .docs-cta {
+            text-align: center;
+            background: var(--bg-light-green);
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border: 1px solid var(--border-color);
+        }
+        .docs-cta h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .docs-cta p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+        }
+        .file-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-list li:last-child {
+            border-bottom: none;
+        }
+        .file-list .file-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .file-list .file-name {
+            color: var(--text-primary);
+            flex: 1;
+        }
+        .file-list .file-size {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-right: 15px;
+        }
+        .file-list .btn-sm {
+            padding: 4px 14px;
+            font-size: 0.8rem;
+        }
+
+        .breadcrumbs {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .breadcrumbs a {
+            color: var(--primary);
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumbs span {
+            margin: 0 6px;
+        }
+
+        .cert-placeholder {
+            background: var(--bg-gray);
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            text-align: center;
+            border: 1px dashed var(--border-color);
+        }
+
+        .samples-link {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background: var(--bg-gray);
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+        .samples-link a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .samples-link a:hover {
+            color: var(--primary-hover);
+        }
+
+        @media (max-width: 768px) {
+            .docs-grid {
+                grid-template-columns: 1fr;
+            }
+            .docs-card .req-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2px;
+            }
+            .docs-card .req-value {
+                text-align: left;
+            }
+            .file-list li {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .file-list .file-size {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ШАПКА
+     ============================================================ -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">ПАПИР-МАРКЕТ</span>
+                <span class="logo-sub">Производитель упаковочных материалов</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Продукция</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html" class="active">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+79183268872" class="header-phone">+7 918 326-88-72</a>
+            <a href="calculator.html" class="btn btn-primary btn-sm">Получить расчёт</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">☰</div>
+    </div>
+</header>
+
+<!-- ============================================================
+     ОСНОВНОЙ КОНТЕНТ
+     ============================================================ -->
+<main style="padding:40px 0;">
+    <div class="container">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <span>Документы</span>
+        </div>
+
+        <h1 style="margin-bottom:15px;">Документы предприятия</h1>
+        <p style="font-size:1.05rem;color:var(--text-secondary);margin-bottom:30px;">
+            Официальные реквизиты, карточка предприятия и документы для скачивания.
+        </p>
+
+        <div class="docs-grid">
+            <!-- Карточка предприятия -->
+            <div class="docs-card">
+                <h3>Карточка предприятия</h3>
+                <div class="req-item">
+                    <span class="req-label">Полное наименование</span>
+                    <span class="req-value">ООО «ПАПИР-МАРКЕТ»</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">ИНН</span>
+                    <span class="req-value">2372025383</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">КПП</span>
+                    <span class="req-value">237201001</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">ОГРН</span>
+                    <span class="req-value">1192375033674</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">ОКПО</span>
+                    <span class="req-value">39452474</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">Юридический адрес</span>
+                    <span class="req-value">352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">Телефон</span>
+                    <span class="req-value">+7 918 326-88-72</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">Email</span>
+                    <span class="req-value">papir-market.sale@mail.ru</span>
+                </div>
+            </div>
+
+            <!-- Банковские реквизиты -->
+            <div class="docs-card">
+                <h3>Банковские реквизиты</h3>
+                <div class="req-item">
+                    <span class="req-label">Банк</span>
+                    <span class="req-value">Банк «ЮГ-Инвест» г. Краснодар</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">БИК</span>
+                    <span class="req-value">040349966</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">Корр. счёт</span>
+                    <span class="req-value">30101810600000000966</span>
+                </div>
+                <div class="req-item">
+                    <span class="req-label">Расчётный счёт</span>
+                    <span class="req-value">40702810400850009797</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Сертификаты -->
+        <div class="docs-card" style="margin-top:20px;">
+            <h3>Сертификаты и декларации</h3>
+            <div class="cert-placeholder">
+                📄 В данном разделе будут размещены сертификаты соответствия и декларации на продукцию.<br>
+                Для получения актуальных документов свяжитесь с нами.
+            </div>
+        </div>
+
+        <!-- Документы для скачивания -->
+        <div class="docs-card" style="margin-top:20px;">
+            <h3>Документы для скачивания</h3>
+            <ul class="file-list">
+                <li>
+                    <span>
+                        <span class="file-icon">📄</span>
+                        <span class="file-name">Карточка предприятия (PDF)</span>
+                    </span>
+                    <span>
+                        <span class="file-size">—</span>
+                        <a href="#" class="btn btn-sm btn-primary" onclick="alert('Файл будет доступен для скачивания в ближайшее время.'); return false;">Скачать</a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <span class="file-icon">📄</span>
+                        <span class="file-name">Прайс-лист (PDF)</span>
+                    </span>
+                    <span>
+                        <span class="file-size">—</span>
+                        <a href="#" class="btn btn-sm btn-primary" onclick="alert('Файл будет доступен для скачивания в ближайшее время.'); return false;">Скачать</a>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <span class="file-icon">📄</span>
+                        <span class="file-name">Договор поставки (DOCX)</span>
+                    </span>
+                    <span>
+                        <span class="file-size">—</span>
+                        <a href="#" class="btn btn-sm btn-primary" onclick="alert('Файл будет доступен для скачивания в ближайшее время.'); return false;">Скачать</a>
+                    </span>
+                </li>
+            </ul>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-top:10px;">
+                * Файлы будут добавлены позже. Если нужен документ срочно — свяжитесь с нами.
+            </p>
+        </div>
+
+        <!-- Ссылка на тестовые образцы -->
+        <div class="samples-link">
+            🧪 Хотите проверить качество продукции? <a href="index.html#samples">Запросите тестовые образцы</a>
+        </div>
+
+        <!-- Блок с призывом -->
+        <div class="docs-cta">
+            <h3>Остались вопросы по документам?</h3>
+            <p>Свяжитесь с нами — мы отправим все необходимые файлы и ответим на ваши вопросы.</p>
+            <a href="contacts.html" class="btn btn-primary">Связаться</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- ============================================================
+     ПОДВАЛ
+     ============================================================ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО «ПАПИР-МАРКЕТ»</h4>
+                <p style="font-size:0.9rem;">Производитель защитных картонных уголков, картона для гофрокартона и крафт-бумаги.</p>
+                <p><strong>ИНН:</strong> 2372025383</p>
+                <p><strong>ОГРН:</strong> 1192375033674</p>
+                <p><strong>Юридический адрес:</strong> 352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div>
+<<<<<<< HEAD
                 <h4 class="footer__col-title">Информация</h4>
                 <ul class="footer__links">
                     <li><a href="docs.html">Документы</a></li>
@@ -176,6 +564,56 @@
 <script src="data.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/dev-mode.js"></script>
+=======
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+79183268872">+7 918 326-88-72</a></p>
+                <p><a href="mailto:papir-market.sale@mail.ru">papir-market.sale@mail.ru</a></p>
+                <p>352244, Краснодарский край, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО «ПАПИР-МАРКЕТ». Все права защищены.</div>
+    </div>
+</footer>
+
+<!-- ============================================================
+     ПЛАВАЮЩИЕ КНОПКИ
+     ============================================================ -->
+<div class="floating-buttons">
+    <a href="https://wa.me/79183268872?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" aria-label="Написать в WhatsApp">💬</a>
+    <a href="https://t.me/in4707?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn telegram" aria-label="Написать в Telegram">✈️</a>
+</div>
+
+<!-- ============================================================
+     СКРИПТЫ
+     ============================================================ -->
+<script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ================================================================
+    // МОБИЛЬНОЕ МЕНЮ
+    // ================================================================
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) {
+                nav.classList.toggle('open');
+            }
+        });
+    }
+});
+</script>
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
 
 </body>
 </html>

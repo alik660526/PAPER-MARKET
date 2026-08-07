@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <meta name="description" content="Прайс-лист на защитные картонные уголки ООО «ПАПИР-МАРКЕТ». Цены за погонный метр. Доставка по России.">
     <title>Прайс-лист на картонные уголки – ООО «ПАПИР-МАРКЕТ»</title>
     <link rel="canonical" href="https://papir-market.ru/price.html">
@@ -14,11 +15,23 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+=======
+    <meta name="description" content="Прайс-лист ООО «ПАПИР-МАРКЕТ» на защитные картонные уголки. Цены за погонный метр. Доставка по России. Получите индивидуальное предложение.">
+    <title>Прайс-лист на картонные уголки – ООО «ПАПИР-МАРКЕТ»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         МИКРОРАЗМЕТКА SCHEMA.ORG
+         ============================================================ -->
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
+<<<<<<< HEAD
             { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://papir-market.ru/" },
             { "@type": "ListItem", "position": 2, "name": "Прайс-лист", "item": "https://papir-market.ru/price.html" }
         ]
@@ -118,17 +131,279 @@
                 <thead>
                     <tr>
                         <th>Товар</th>
+=======
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://papir-market.ru/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Прайс-лист",
+                "item": "https://papir-market.ru/price.html"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        .price-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .price-header h1 {
+            margin: 0;
+        }
+
+        .price-note {
+            background: var(--bg-light-green);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        .price-note strong {
+            color: var(--text-primary);
+        }
+        .price-note a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .price-note a:hover {
+            color: var(--primary-hover);
+        }
+
+        .price-request {
+            text-align: center;
+            background: var(--bg-light-green);
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border: 1px solid var(--border-color);
+        }
+        .price-request h3 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .price-request p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+        .price-request .btn {
+            font-size: 1.05rem;
+            padding: 12px 36px;
+        }
+
+        .price-actions {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .price-table-wrap {
+            overflow-x: auto;
+            background: var(--bg-card);
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+            padding: 15px;
+            border: 1px solid var(--border-light);
+        }
+        .price-table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            min-width: 700px;
+        }
+        .price-table-wrap th,
+        .price-table-wrap td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .price-table-wrap th {
+            background: var(--bg-gray);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .price-table-wrap .product-name {
+            text-align: left;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .price-table-wrap .price-cell {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .price-table-wrap .order-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+        .price-table-wrap .order-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .breadcrumbs {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .breadcrumbs a {
+            color: var(--primary);
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumbs span {
+            margin: 0 6px;
+        }
+
+        .price-form-container {
+            max-width: 600px;
+            margin: 30px auto 0;
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-card);
+        }
+        .price-form-container label {
+            font-weight: 600;
+            display: block;
+            margin-top: 15px;
+            color: var(--text-primary);
+        }
+        .price-form-container input,
+        .price-form-container select,
+        .price-form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-input);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+        .price-form-container .form-success {
+            display: none;
+            padding: 15px;
+            background: var(--bg-light-green);
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid var(--primary);
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-top: 15px;
+        }
+        .price-form-container .form-success.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .price-table-wrap table {
+                min-width: 600px;
+                font-size: 0.8rem;
+            }
+            .price-table-wrap th,
+            .price-table-wrap td {
+                padding: 8px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ШАПКА
+     ============================================================ -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">ПАПИР-МАРКЕТ</span>
+                <span class="logo-sub">Производитель упаковочных материалов</span>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Продукция</a></li>
+                <li><a href="price.html" class="active">Прайс-лист</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="find-us.html">Как нас найти</a></li>
+                <li><a href="docs.html">Документы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+79183268872" class="header-phone">+7 918 326-88-72</a>
+            <a href="calculator.html" class="btn btn-primary btn-sm">Получить расчёт</a>
+        </div>
+        <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">☰</div>
+    </div>
+</header>
+
+<!-- ============================================================
+     ОСНОВНОЙ КОНТЕНТ
+     ============================================================ -->
+<main style="padding:40px 0;">
+    <div class="container">
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>›</span>
+            <span>Прайс-лист</span>
+        </div>
+
+        <div class="price-header">
+            <h1>Прайс-лист на защитные картонные уголки</h1>
+        </div>
+
+        <!-- Пояснение -->
+        <div class="price-note">
+            <strong>🛈 Ориентировочные цены.</strong> Стоимость зависит от объёма заказа, условий поставки и доставки.
+            Для постоянных клиентов и крупных партий — индивидуальные условия.
+            <a href="#priceForm">Запросить точный расчёт ↓</a>
+        </div>
+
+        <!-- Таблица -->
+        <div class="price-table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align:left;">Товар</th>
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                         <th>до 100 п.м.</th>
                         <th>до 500 п.м.</th>
                         <th>до 1000 п.м.</th>
                         <th>до 3000 п.м.</th>
                         <th>свыше 3000 п.м.</th>
+<<<<<<< HEAD
+=======
+                        <th>Заказать</th>
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                     </tr>
                 </thead>
                 <tbody id="priceTableBody"></tbody>
             </table>
         </div>
 
+<<<<<<< HEAD
         <div class="form-container" style="margin-top:40px;">
             <h3 style="text-align:center;">Получить индивидуальное предложение</h3>
             <form id="priceRequestForm">
@@ -138,12 +413,26 @@
                     <option value="35x35x3">Уголок 35x35x3 мм</option>
                     <option value="35x35x4">Уголок 35x35x4 мм</option>
                     <option value="35x35x5">Уголок 35x35x5 мм</option>
+=======
+        <!-- Форма запроса индивидуальной цены -->
+        <div id="priceForm" class="price-form-container">
+            <h3 style="text-align:center; margin-top:0; color:var(--text-primary);">Получить индивидуальное предложение</h3>
+            <p style="text-align:center; color:var(--text-secondary); font-size:0.95rem; margin-bottom:20px;">
+                Укажите нужный размер, объём и город — мы подготовим точный расчёт.
+            </p>
+            <form id="priceRequestForm">
+                <label for="priceProduct">Интересующий товар:</label>
+                <select id="priceProduct" required>
+                    <option value="">— Выберите —</option>
+                    <option value="35x35x3">Уголок 35x35x3 мм</option>
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                     <option value="40x40x3">Уголок 40x40x3 мм</option>
                     <option value="40x40x4">Уголок 40x40x4 мм</option>
                     <option value="40x40x5">Уголок 40x40x5 мм</option>
                     <option value="50x50x3">Уголок 50x50x3 мм</option>
                     <option value="50x50x4">Уголок 50x50x4 мм</option>
                     <option value="50x50x5">Уголок 50x50x5 мм</option>
+<<<<<<< HEAD
                     <option value="60x60x3">Уголок 60x60x3 мм</option>
                     <option value="60x60x4">Уголок 60x60x4 мм</option>
                     <option value="60x60x5">Уголок 60x60x5 мм</option>
@@ -156,11 +445,14 @@
                     <option value="90x90x3">Уголок 90x90x3 мм</option>
                     <option value="90x90x4">Уголок 90x90x4 мм</option>
                     <option value="90x90x5">Уголок 90x90x5 мм</option>
+=======
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                     <option value="100x100x3">Уголок 100x100x3 мм</option>
                     <option value="100x100x4">Уголок 100x100x4 мм</option>
                     <option value="100x100x5">Уголок 100x100x5 мм</option>
                     <option value="100x100x6">Уголок 100x100x6 мм</option>
                     <option value="fluting">Бумага для гофрирования</option>
+<<<<<<< HEAD
                     <option value="karton">Картон товарный в рулонах</option>
                 </select>
 
@@ -180,10 +472,32 @@
                 <textarea id="priceComment" class="form-textarea" rows="3" placeholder="Укажите особые условия, если есть"></textarea>
 
                 <label class="form-consent">
+=======
+                    <option value="liner">Картон товарный в рулонах</option>
+                </select>
+
+                <label for="priceQuantity">Планируемый объём (п.м.):</label>
+                <input type="number" id="priceQuantity" placeholder="Например: 1000" min="1" required>
+
+                <label for="priceCity">Город доставки:</label>
+                <input type="text" id="priceCity" placeholder="Например: Краснодар" required>
+
+                <label for="priceName">Ваше имя:</label>
+                <input type="text" id="priceName" placeholder="Иван Иванов" required>
+
+                <label for="pricePhone">Телефон:</label>
+                <input type="tel" id="pricePhone" placeholder="+7 (___) ___-__-__" required>
+
+                <label for="priceComment">Дополнительные требования:</label>
+                <textarea id="priceComment" rows="3" placeholder="Укажите особые условия, если есть"></textarea>
+
+                <label class="consent-checkbox">
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                     <input type="checkbox" name="personal_data_consent" value="yes" required>
                     <span>Я даю согласие на <a href="policy.html" target="_blank">обработку персональных данных</a></span>
                 </label>
 
+<<<<<<< HEAD
                 <button type="submit" class="btn btn--primary form-submit">Получить коммерческое предложение</button>
             </form>
             <div id="priceFormSuccess" class="form-result">✅ Спасибо! Ваш запрос отправлен.</div>
@@ -203,10 +517,60 @@
                 <ul class="footer__links">
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="catalog.html">Продукция</a></li>
+=======
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:15px;">
+                    Получить коммерческое предложение
+                </button>
+            </form>
+            <div id="priceFormSuccess" class="form-success">
+                ✅ Спасибо! Ваш запрос отправлен. Менеджер свяжется с вами в ближайшее время.
+            </div>
+        </div>
+
+        <!-- Блок "Не нашли нужный размер?" -->
+        <div class="price-request">
+            <h3>Не нашли подходящий размер?</h3>
+            <p>Мы можем изготовить уголки по вашим параметрам. Оставьте заявку — менеджер свяжется с вами для расчёта.</p>
+            <a href="contacts.html" class="btn btn-primary">Оставить заявку</a>
+        </div>
+
+        <div class="price-actions">
+            <a href="#" class="btn btn-secondary" onclick="alert('Прайс-лист будет доступен для скачивания в ближайшее время.'); return false;">Скачать прайс-лист (PDF)</a>
+            <a href="contacts.html" class="btn btn-outline">Запросить коммерческое предложение</a>
+        </div>
+
+    </div>
+</main>
+
+<!-- ============================================================
+     ПОДВАЛ
+     ============================================================ -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>ООО «ПАПИР-МАРКЕТ»</h4>
+                <p style="font-size:0.9rem;">Производитель защитных картонных уголков, картона для гофрокартона и крафт-бумаги.</p>
+                <p><strong>ИНН:</strong> 2372025383</p>
+                <p><strong>ОГРН:</strong> 1192375033674</p>
+                <p><strong>Юридический адрес:</strong> 352244, Краснодарский край, Новокубанский р-н, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+            <div>
+                <h4>Меню</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Продукция</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="calculator.html">Калькулятор</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="find-us.html">Как нас найти</a></li>
+                    <li><a href="docs.html">Документы</a></li>
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div>
+<<<<<<< HEAD
                 <h4 class="footer__col-title">Информация</h4>
                 <ul class="footer__links">
                     <li><a href="docs.html">Документы</a></li>
@@ -231,6 +595,149 @@
 <script src="js/menu.js"></script>
 <script src="js/price.js"></script>
 <script src="js/dev-mode.js"></script>
+=======
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="docs.html">Документы</a></li>
+                    <li><a href="policy.html">Политика конфиденциальности</a></li>
+                    <li><a href="agreement.html">Пользовательское соглашение</a></li>
+                    <li><a href="sitemap.html">Карта сайта</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p><a href="tel:+79183268872">+7 918 326-88-72</a></p>
+                <p><a href="mailto:papir-market.sale@mail.ru">papir-market.sale@mail.ru</a></p>
+                <p>352244, Краснодарский край, г. Новокубанск, ул. Новаторов, д. 1/10</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 ООО «ПАПИР-МАРКЕТ». Все права защищены.</div>
+    </div>
+</footer>
+
+<!-- ============================================================
+     ПЛАВАЮЩИЕ КНОПКИ
+     ============================================================ -->
+<div class="floating-buttons">
+    <a href="https://wa.me/79183268872?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" aria-label="Написать в WhatsApp">💬</a>
+    <a href="https://t.me/in4707?text=Здравствуйте!%20Хочу%20заказать%20продукцию%20ООО%20ПАПИР-МАРКЕТ." target="_blank" rel="noopener noreferrer" class="floating-btn telegram" aria-label="Написать в Telegram">✈️</a>
+</div>
+
+<!-- ============================================================
+     СКРИПТЫ
+     ============================================================ -->
+<script src="data.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ================================================================
+    // ЗАПОЛНЕНИЕ ТАБЛИЦЫ ПРАЙС-ЛИСТА
+    // ================================================================
+    const tbody = document.getElementById('priceTableBody');
+
+    if (tbody && typeof data !== 'undefined' && data.products && data.products.corner) {
+        const corners = data.products.corner;
+
+        corners.forEach(p => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="product-name">${p.title}</td>
+                <td class="price-cell">${p.priceTo100.toFixed(2)} ₽</td>
+                <td class="price-cell">${p.priceTo500.toFixed(2)} ₽</td>
+                <td class="price-cell">${p.priceTo1000.toFixed(2)} ₽</td>
+                <td class="price-cell">${p.priceTo3000.toFixed(2)} ₽</td>
+                <td class="price-cell">${p.priceOver3000.toFixed(2)} ₽</td>
+                <td><a href="calculator.html" class="order-btn">Рассчитать</a></td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // ================================================================
+    // ФОРМА ЗАПРОСА ИНДИВИДУАЛЬНОЙ ЦЕНЫ
+    // ================================================================
+    const priceForm = document.getElementById('priceRequestForm');
+    const priceSuccess = document.getElementById('priceFormSuccess');
+
+    if (priceForm) {
+        priceForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const consent = this.querySelector('input[name="personal_data_consent"]');
+            if (consent && !consent.checked) {
+                alert('Пожалуйста, дайте согласие на обработку персональных данных.');
+                return;
+            }
+
+            const product = document.getElementById('priceProduct').value;
+            const quantity = document.getElementById('priceQuantity').value;
+            const city = document.getElementById('priceCity').value;
+            const name = document.getElementById('priceName').value;
+            const phone = document.getElementById('pricePhone').value;
+            const comment = document.getElementById('priceComment').value || 'без комментария';
+
+            if (!product || !quantity || !city || !name || !phone) {
+                alert('Пожалуйста, заполните все обязательные поля.');
+                return;
+            }
+
+            const productLabel = document.getElementById('priceProduct');
+            const productText = productLabel.options[productLabel.selectedIndex].text;
+
+            const whatsapp = (typeof data !== 'undefined' && data.company && data.company.whatsapp)
+                ? data.company.whatsapp
+                : '79183268872';
+
+            const msg = `Здравствуйте! Запрос коммерческого предложения:\n` +
+                       `Товар: ${productText}\n` +
+                       `Объём: ${quantity} п.м.\n` +
+                       `Город: ${city}\n` +
+                       `Имя: ${name}\n` +
+                       `Телефон: ${phone}\n` +
+                       `Комментарий: ${comment}`;
+
+            window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+
+            // Отправка в Telegram
+            const botToken = ''; // Вставьте токен бота
+            const chatId = ''; // Вставьте ID чата
+            if (botToken && chatId) {
+                fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: `📊 ЗАПРОС КП С ПРАЙС-ЛИСТА:\n\nТовар: ${productText}\nОбъём: ${quantity} п.м.\nГород: ${city}\nИмя: ${name}\nТелефон: ${phone}\nКомментарий: ${comment}`,
+                        parse_mode: 'HTML'
+                    })
+                }).catch(err => console.warn('Telegram отправка не удалась:', err));
+            }
+
+            priceSuccess.classList.add('show');
+            priceForm.reset();
+
+            setTimeout(() => {
+                priceSuccess.classList.remove('show');
+            }, 10000);
+        });
+    }
+
+    // ================================================================
+    // МОБИЛЬНОЕ МЕНЮ
+    // ================================================================
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) {
+                nav.classList.toggle('open');
+            }
+        });
+    }
+});
+</script>
+>>>>>>> 8b4f43bdafab4d124a24be051ec6ab0c9b62e843
 
 </body>
 </html>
